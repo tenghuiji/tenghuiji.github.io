@@ -2,7 +2,7 @@
 <html lang="zh-Hans"
 >
 <head>
-    <title>My First Review - Tenghuiji's Blog</title>
+    <title>Correlation Analysis - Tenghuiji's Blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -20,21 +20,16 @@
 <link rel="icon" type="image/png" href="tenghuiji.github.io/images/favicon-16x16.png" sizes="16x16">
 <link rel="mask-icon" href="tenghuiji.github.io/images/safari-pinned-tab.svg" color="#603cba">
 
-<link rel="canonical" href="tenghuiji.github.io/my-first-review.html">
 
-        <meta name="author" content="Tenghuiji" />
-        <meta name="description" content="Following is a review of my favorite mechanical keyboard." />
+    <meta name="author" content="Tenghuiji" />
+    <meta name="keywords" content="Correlation Analysis" />
 
+    <!-- Open Graph tags -->
         <meta property="og:site_name" content="Tenghuiji's Blog" />
-        <meta property="og:type" content="article"/>
-        <meta property="og:title" content="My First Review"/>
-        <meta property="og:url" content="tenghuiji.github.io/my-first-review.html"/>
-        <meta property="og:description" content="Following is a review of my favorite mechanical keyboard."/>
-        <meta property="article:published_time" content="2010-12-03" />
-            <meta property="article:section" content="Review" />
-            <meta property="article:author" content="Tenghuiji" />
-        <meta property="og:image"
-                  content="tenghuiji.github.io/my-first-review.png"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Tenghuiji's Blog"/>
+        <meta property="og:url" content="tenghuiji.github.io"/>
+        <meta property="og:description" content="Tenghuiji's Blog"/>
 
 
 
@@ -55,7 +50,7 @@
     <link href="tenghuiji.github.io/theme/css/github-markdown.css" rel="stylesheet">
 </head>
 <body>
-<div style="display:none" id="title">My First Review - Tenghuiji's Blog</div>
+<div style="display:none" id="title">Correlation Analysis - Tenghuiji's Blog</div>
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -92,10 +87,10 @@ Tenghuiji's Blog            </a>
                             <i class="fa fa-folder-o"></i><span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li >
+                            <li class="active">
                                 <a href="tenghuiji.github.io/category/correlation-analysis.html"><i class="fa fa-folder-o"></i> Correlation analysis</a>
                             </li>
-                            <li class="active">
+                            <li >
                                 <a href="tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
                             </li>
                         </ul>
@@ -103,10 +98,10 @@ Tenghuiji's Blog            </a>
                 </ul>
 
                     <ul class="nav navbar-nav hidden-xs hidden-sm">
-                        <li >
+                        <li class="active">
                             <a href="tenghuiji.github.io/category/correlation-analysis.html"><i class="fa fa-folder-o"></i> Correlation analysis</a>
                         </li>
-                        <li class="active">
+                        <li >
                             <a href="tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
                         </li>
                     </ul>
@@ -129,72 +124,47 @@ Tenghuiji's Blog            </a>
     <div class="row" style="padding-bottom:80px;padding-top:80px;">
         <div class="col-xl-21 col-lg-20 col-md-18">
             <div id="loading-block">
-            <ol class="breadcrumb">
-                <li><a href="tenghuiji.github.io/" title="Tenghuiji's Blog"><i class="fa fa-home fa-lg"></i></a></li>
-                <li><a href="tenghuiji.github.io/category/review.html" title="Review">Review</a></li>
-                <li class="active">My First Review</li>
-            </ol>
-    <section id="content" class="article-content">
-        <article>
-            <header class="page-header jumbotron jumbotron-primary panel-primary" id="article-header">
+    <ol class="breadcrumb">
+        <li><a href="tenghuiji.github.io/" title="Tenghuiji's Blog"><i class="fa fa-home fa-lg"></i></a></li>
+        <li><a href="tenghuiji.github.io/categories.html" title="Tenghuiji's Blog Categories">        Categories
+</a></li>
+        <li class="active">Correlation Analysis</li>
+        <li><a href="tenghuiji.github.io/feeds/Correlation Analysis.atom.xml" title="        Feeds for category 
+"><i class="fa fa-rss fa-lg"></i></a></li>
+    </ol>
+    <div class="articles-container">
+        <div class="article-item">
+            <article class="panel panel-primary">
                 <div class="panel-heading">
-                    <h1>
-                        My First Review
-                        <a href="tenghuiji.github.io/my-first-review.html"
-                           rel="bookmark"
-                           class="btn btn-primary btn-lg"
-                           title="        Permalink to My First Review
-">
-                           <i class="mdi-action-launch"></i>
-                        </a>
-                    </h1>
+                    <div class="row">
+                        <div class="col-xl-19 col-lg-19 col-md-20 col-sm-19 col-xs-24">
+                            <a href="tenghuiji.github.io/pm25-correlation-analysis.html" class="btn btn-primary btn-lg"><h2>PM2.5 Correlation Analysis
+                            </h2></a>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-4 col-sm-5 hidden-xs">
+                            
+                            <div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="panel-body">
-<div class="post-info">
-    <span class="published">
-        <time datetime="2010-12-03T10:20:00+08:00"><i class="fa fa-calendar"></i> 2010年12月03日(周五)</time>
-    </span>
+                    <div class="summary"><h1 id="pm25">北京PM2.5相关性分析</h1>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
 
 
-
-
-    <a onclick="$.get('tenghuiji.github.io/my-first-review.rst.html', function(data){$('#source-code').html(data)});$('#article-content').toggle();$('#source-content').toggle();" class="btn btn-primary" title="        Show source code of this page
-"><i class="fa fa-code"></i></a>
-    <!--<a href="tenghuiji.github.io/my-first-review.pdf" class="btn btn-primary" title="        Show pdf version of this page
-" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
-    <a href="tenghuiji.github.io/my-first-review.png" class="btn btn-primary" title="        Show captured png of this page
-" target="_blank""><i class="fa fa-file-photo-o"></i></a>-->
-
-
-
-
-</div><!-- /.post-info -->                </div>
-            </header>
-
-            <div class="entry-content jumbotron" id="article-content">
-                <p>Following is a review of my favorite mechanical keyboard.</p>
-            </div>
-            <div class="entry-content jumbotron" id="source-content" style="display: none">
-                <!-- <pre><code id="source-code">
-                </code></pre> -->
-                <div id="source-code"></div>
-            </div>
-            <!-- /.entry-content -->
-
-            <div class="row" id="prevnext">
-                <div class="col-xs-12">
+<div class="highlight"><pre><span></span><span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">hjteng</span><span class="o">/</span><span class="n">anaconda3</span><span class="o">/</span><span class="n">envs</span><span class="o">/</span><span class="n">TensorFlow</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="o">.</span><span class="mi">6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">statsmodels</span><span class="o">/</span><span class="n">compat</span><span class="o">/</span><span class="n">pandas</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">56</span><span class="p">:</span> <span class="ne">FutureWarning</span><span class="p">:</span> <span class="n">The</span> <span class="n">pandas</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">datetools</span> <span class="n">module</span> <span class="ow">is</span> <span class="n">deprecated</span> <span class="ow">and</span> <span class="n">will</span> <span class="n">be</span> <span class="n">removed</span> <span class="ow">in</span> <span class="n">a …</span></pre></div>
+                    </div>
                 </div>
-                <div class="col-xs-12">
-                </div>
-            </div>
-
-
-<section class="comments" id="comments">
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            </article>
+        </div>
     </div>
-</section>        </article>
-    </section>
-
 
             </div>
 <!-- Modal -->
