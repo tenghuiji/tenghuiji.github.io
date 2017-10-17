@@ -23,13 +23,13 @@
 <link rel="canonical" href="//tenghuiji.github.io/pm25-correlation-analysis.html">
 
         <meta name="author" content="Tenghuiji" />
-        <meta name="description" content="北京PM2.5相关性分析 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns %matplotlib inline #### 加载原始数据 ```python dataset = pd.read_csv(&#39;./dataset/beijing.csv&#39;) dataset.head(5) .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top …" />
+        <meta name="description" content="北京PM2.5相关性分析 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns %matplotlib inline 加载原始数据 dataset = pd.read_csv(&#39;./dataset/beijing.csv&#39;) dataset.head(5) .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } No …" />
 
         <meta property="og:site_name" content="Tenghuiji's Blog" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="PM2.5 Correlation Analysis"/>
         <meta property="og:url" content="//tenghuiji.github.io/pm25-correlation-analysis.html"/>
-        <meta property="og:description" content="北京PM2.5相关性分析 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns %matplotlib inline #### 加载原始数据 ```python dataset = pd.read_csv(&#39;./dataset/beijing.csv&#39;) dataset.head(5) .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top …"/>
+        <meta property="og:description" content="北京PM2.5相关性分析 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns %matplotlib inline 加载原始数据 dataset = pd.read_csv(&#39;./dataset/beijing.csv&#39;) dataset.head(5) .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } No …"/>
         <meta property="article:published_time" content="2010-12-04" />
             <meta property="article:section" content="Correlation Analysis" />
             <meta property="article:author" content="Tenghuiji" />
@@ -176,14 +176,11 @@ Tenghuiji's Blog            </a>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
 <span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
 
 
-
-<span class="c1">#### 加载原始数据</span>
-
-
-<span class="sb">``</span><span class="err">`</span><span class="n">python</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">)</span>
+<h4 id="_1">加载原始数据</h4>
+<div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">)</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
@@ -319,7 +316,7 @@ cbwd: Combined wind direction <br />
 Iws: Cumulated wind speed (m/s) <br />
 Is: Cumulated hours of snow <br />
 Ir: Cumulated hours of rain</p>
-<h4 id="_1">数据清洗</h4>
+<h4 id="_2">数据清洗</h4>
 <div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                       <span class="n">date_parser</span><span class="o">=</span><span class="k">lambda</span> <span class="n">date</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span><span class="s1">&#39;%Y %m </span><span class="si">%d</span><span class="s1"> %H&#39;</span><span class="p">))</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -461,12 +458,12 @@ dtype: bool
 </pre></div>
 
 
-<h4 id="_2">保存数据清洗结果</h4>
+<h4 id="_3">保存数据清洗结果</h4>
 <div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing_pm25.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
 
-<h2 id="_3">加载数据</h2>
+<h2 id="_4">加载数据</h2>
 <div class="highlight"><pre><span></span><span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing_pm25.csv&#39;</span><span class="p">)</span>
 <span class="n">series</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">series_values</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
@@ -483,7 +480,7 @@ dtype: bool
 
 
 <p><img alt="png" src="output_15_0.png" /></p>
-<h3 id="_4">相关性分析</h3>
+<h3 id="_5">相关性分析</h3>
 <div class="highlight"><pre><span></span><span class="n">corr_all</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 
 <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
