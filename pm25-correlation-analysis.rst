@@ -10,10 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 %matplotlib inline
-```
 
-    /Users/hjteng/anaconda3/envs/TensorFlow/lib/python3.6/site-packages/statsmodels/compat/pandas.py:56: FutureWarning: The pandas.core.datetools module is deprecated and will be removed in a future version. Please use the pandas.tseries module instead.
-      from pandas.core import datetools
 
 
 #### 加载原始数据
