@@ -221,15 +221,6 @@
     "#保存结果到csv文件中\n",
     "df.to_csv('./dataset/output.csv')"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {
-    "collapsed": true
-   },
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
