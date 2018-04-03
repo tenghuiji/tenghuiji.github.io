@@ -316,7 +316,7 @@ pip install beautifulsoup4&lt;br/&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="dataframe table-striped table table-hover"&gt;
+&lt;table border="1" class="table-striped table dataframe table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -486,7 +486,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="dataframe table-striped table table-hover"&gt;
+&lt;table border="1" class="table-striped table dataframe table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4367,7 +4367,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="dataframe table-striped table table-hover"&gt;
+&lt;table border="1" class="table-striped table dataframe table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4396,7 +4396,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="dataframe table-striped table table-hover"&gt;
+&lt;table border="1" class="table-striped table dataframe table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4534,7 +4534,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="dataframe table-striped table table-hover"&gt;
+&lt;table border="1" class="table-striped table dataframe table-hover"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
