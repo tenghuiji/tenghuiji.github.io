@@ -24,13 +24,13 @@
 
         <meta name="author" content="tenghuiji" />
         <meta name="keywords" content="python selenium BeautifulSoup xpath" />
-        <meta name="description" content="天眼查爬虫¶2018-1-21 marking的同事跑过来求帮忙，能不能通过爬虫帮他，根据会议收集表格中，人员名单所填写的公司名称添加一列行业信息。 他目前是手工到天眼输入公司名称，然后再取出觉得匹配的公司，最后在找到行业分类。但是人员明天太多了，做这么枯燥的工作他要疯了:( 我觉得这个应该比较简单，答应他帮他写个爬虫 确定爬取方式¶selenium是个自动化测试工具，他可以通过浏览器来模拟各种操作实现测试页面功能 BeautifulSoup是个爬虫常用的Dom解析工具 lxml提供了xpath获取方法，强烈推荐通过xpath访问节点，配合Chrome的inspect工具中的 copy xpath可以节省大量的节点获取工作量 安装必要的工具¶pip install selenium pip install lxml pip install beautifulsoup4 下载最新的chromedriver http://chromedriver.storage.googleapis.com/index.html 我是mac 安装到/usr/local/bin/目录下，然后运行 chromedriver -v查看是否安装好了 常见问题¶ 公司名称不存在；在天眼搜里面找不到公司名称就在程序中填写none或者其他的字符说明 相似公司很多个不确定怎么选；这个比较不好处理，现在是取天眼搜中查找到的top 1 记录 我想人选择的话可能会根据与会者所在地配合来查找吧，例如是在北京参加的，那么就有限找北京的同名（名称相似）的公司 天眼里面找到的母公司下面有多个子公司，导致鼠标点击不到连接，必须拉滚动条才能解决问题" />
+        <meta name="description" content="用 selenium 和 BeautifulSoup 爬取 www.tianyancha.com 的数据" />
 
         <meta property="og:site_name" content="Tenghuiji's Blog" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="天眼查爬虫"/>
         <meta property="og:url" content="//tenghuiji.github.io/spider-tianyancha.html"/>
-        <meta property="og:description" content="天眼查爬虫¶2018-1-21 marking的同事跑过来求帮忙，能不能通过爬虫帮他，根据会议收集表格中，人员名单所填写的公司名称添加一列行业信息。 他目前是手工到天眼输入公司名称，然后再取出觉得匹配的公司，最后在找到行业分类。但是人员明天太多了，做这么枯燥的工作他要疯了:( 我觉得这个应该比较简单，答应他帮他写个爬虫 确定爬取方式¶selenium是个自动化测试工具，他可以通过浏览器来模拟各种操作实现测试页面功能 BeautifulSoup是个爬虫常用的Dom解析工具 lxml提供了xpath获取方法，强烈推荐通过xpath访问节点，配合Chrome的inspect工具中的 copy xpath可以节省大量的节点获取工作量 安装必要的工具¶pip install selenium pip install lxml pip install beautifulsoup4 下载最新的chromedriver http://chromedriver.storage.googleapis.com/index.html 我是mac 安装到/usr/local/bin/目录下，然后运行 chromedriver -v查看是否安装好了 常见问题¶ 公司名称不存在；在天眼搜里面找不到公司名称就在程序中填写none或者其他的字符说明 相似公司很多个不确定怎么选；这个比较不好处理，现在是取天眼搜中查找到的top 1 记录 我想人选择的话可能会根据与会者所在地配合来查找吧，例如是在北京参加的，那么就有限找北京的同名（名称相似）的公司 天眼里面找到的母公司下面有多个子公司，导致鼠标点击不到连接，必须拉滚动条才能解决问题"/>
+        <meta property="og:description" content="用 selenium 和 BeautifulSoup 爬取 www.tianyancha.com 的数据"/>
         <meta property="article:published_time" content="2018-03-26" />
             <meta property="article:section" content="spider" />
             <meta property="article:tag" content="python selenium BeautifulSoup xpath" />

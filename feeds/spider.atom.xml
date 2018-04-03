@@ -1,32 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tenghuiji's Blog - spider</title><link href="//tenghuiji.github.io/" rel="alternate"></link><link href="//tenghuiji.github.io/feeds/spider.atom.xml" rel="self"></link><id>//tenghuiji.github.io/</id><updated>2018-03-26T20:00:00+08:00</updated><entry><title>天眼查爬虫</title><link href="//tenghuiji.github.io/spider-tianyancha.html" rel="alternate"></link><published>2018-03-26T20:00:00+08:00</published><updated>2018-03-26T20:00:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-03-26:/spider-tianyancha.html</id><summary type="html">
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="天眼查爬虫"&gt;天眼查爬虫&lt;a class="anchor-link" href="#天眼查爬虫"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;2018-1-21&lt;br /&gt;
-marking的同事跑过来求帮忙，能不能通过爬虫帮他，根据会议收集表格中，人员名单所填写的公司名称添加一列行业信息。&lt;br /&gt;
-他目前是手工到天眼输入公司名称，然后再取出觉得匹配的公司，最后在找到行业分类。但是人员明天太多了，做这么枯燥的工作他要疯了:(&lt;br /&gt;
-我觉得这个应该比较简单，答应他帮他写个爬虫&lt;/p&gt;
-&lt;h6 id="确定爬取方式"&gt;确定爬取方式&lt;a class="anchor-link" href="#确定爬取方式"&gt;¶&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;selenium是个自动化测试工具，他可以通过浏览器来模拟各种操作实现测试页面功能&lt;br /&gt;
-BeautifulSoup是个爬虫常用的Dom解析工具&lt;br /&gt;
-lxml提供了xpath获取方法，强烈推荐通过xpath访问节点，配合Chrome的inspect工具中的 copy xpath可以节省大量的节点获取工作量&lt;/p&gt;
-&lt;h6 id="安装必要的工具"&gt;安装必要的工具&lt;a class="anchor-link" href="#安装必要的工具"&gt;¶&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;pip install selenium&lt;br /&gt;
-pip install lxml&lt;br /&gt;
-pip install beautifulsoup4&lt;br /&gt;
-下载最新的chromedriver&lt;br /&gt;
-&lt;a href="http://chromedriver.storage.googleapis.com/index.html"&gt;http://chromedriver.storage.googleapis.com/index.html&lt;/a&gt;&lt;br /&gt;
-我是mac 安装到/usr/local/bin/目录下，然后运行 chromedriver -v查看是否安装好了&lt;/p&gt;
-&lt;h6 id="常见问题"&gt;常见问题&lt;a class="anchor-link" href="#常见问题"&gt;¶&lt;/a&gt;&lt;/h6&gt;&lt;ol&gt;
-&lt;li&gt;公司名称不存在；在天眼搜里面找不到公司名称就在程序中填写none或者其他的字符说明  &lt;/li&gt;
-&lt;li&gt;相似公司很多个不确定怎么选；这个比较不好处理，现在是取天眼搜中查找到的top 1 记录 我想人选择的话可能会根据与会者所在地配合来查找吧，例如是在北京参加的，那么就有限找北京的同名（名称相似）的公司  &lt;/li&gt;
-&lt;li&gt;天眼里面找到的母公司下面有多个子公司，导致鼠标点击不到连接，必须拉滚动条才能解决问题  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tenghuiji's Blog - spider</title><link href="//tenghuiji.github.io/" rel="alternate"></link><link href="//tenghuiji.github.io/feeds/spider.atom.xml" rel="self"></link><id>//tenghuiji.github.io/</id><updated>2018-03-26T20:00:00+08:00</updated><entry><title>天眼查爬虫</title><link href="//tenghuiji.github.io/spider-tianyancha.html" rel="alternate"></link><published>2018-03-26T20:00:00+08:00</published><updated>2018-03-26T20:00:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-03-26:/spider-tianyancha.html</id><summary type="html">&lt;p&gt;用 selenium 和 BeautifulSoup 爬取 www.tianyancha.com 的数据&lt;/p&gt;</summary><content type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
