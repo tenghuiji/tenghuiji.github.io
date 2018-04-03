@@ -179,7 +179,7 @@ Tenghuiji's Blog            </a>
 
             <div class="entry-content jumbotron" id="article-content">
                 <h1 id="pm25">北京PM2.5相关性分析</h1>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
@@ -188,7 +188,7 @@ Tenghuiji's Blog            </a>
 
 
 <h4 id="_1">加载原始数据</h4>
-<div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">)</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
@@ -311,21 +311,21 @@ Tenghuiji's Blog            </a>
 </table>
 </div>
 
-<p>No: row number <br />
-year: year of data in this row <br />
-month: month of data in this row <br />
-day: day of data in this row <br />
-hour: hour of data in this row <br />
-pm2.5: PM2.5 concentration (ug/m^3) <br />
-DEWP: Dew Point (â„ƒ) <br />
-TEMP: Temperature (â„ƒ) <br />
-PRES: Pressure (hPa) <br />
-cbwd: Combined wind direction <br />
-Iws: Cumulated wind speed (m/s) <br />
-Is: Cumulated hours of snow <br />
+<p>No: row number <br>
+year: year of data in this row <br>
+month: month of data in this row <br>
+day: day of data in this row <br>
+hour: hour of data in this row <br>
+pm2.5: PM2.5 concentration (ug/m^3) <br>
+DEWP: Dew Point (â„ƒ) <br>
+TEMP: Temperature (â„ƒ) <br>
+PRES: Pressure (hPa) <br>
+cbwd: Combined wind direction <br>
+Iws: Cumulated wind speed (m/s) <br>
+Is: Cumulated hours of snow <br>
 Ir: Cumulated hours of rain</p>
 <h4 id="_2">数据清洗</h4>
-<div class="highlight"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+<div class="codehilite"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
                       <span class="n">date_parser</span><span class="o">=</span><span class="k">lambda</span> <span class="n">date</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span><span class="s1">&#39;%Y %m </span><span class="si">%d</span><span class="s1"> %H&#39;</span><span class="p">))</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">dataset</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;date&#39;</span>
@@ -433,11 +433,11 @@ Ir: Cumulated hours of rain</p>
 </table>
 </div>
 
-<div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span>pollution     True
+<div class="codehilite"><pre><span></span>pollution     True
 dew          False
 temp         False
 press        False
@@ -449,36 +449,36 @@ dtype: bool
 </pre></div>
 
 
-<div class="highlight"><pre><span></span><span class="c1">#缺失数据用平均值填充</span>
+<div class="codehilite"><pre><span></span><span class="c1">#缺失数据用平均值填充</span>
 <span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s1">&#39;pollution&#39;</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span>array([&#39;NW&#39;, &#39;cv&#39;, &#39;NE&#39;, &#39;SE&#39;], dtype=object)
+<div class="codehilite"><pre><span></span>array([&#39;NW&#39;, &#39;cv&#39;, &#39;NE&#39;, &#39;SE&#39;], dtype=object)
 </pre></div>
 
 
-<div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;NW&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;cv&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;NE&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;SE&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
+<div class="codehilite"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">&#39;NW&#39;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;cv&#39;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;NE&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;SE&#39;</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
 </pre></div>
 
 
 <h4 id="_3">保存数据清洗结果</h4>
-<div class="highlight"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing_pm25.csv&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing_pm25.csv&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <h2 id="_4">加载数据</h2>
-<div class="highlight"><pre><span></span><span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing_pm25.csv&#39;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing_pm25.csv&#39;</span><span class="p">)</span>
 <span class="n">series</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">series_values</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float32&#39;</span><span class="p">)</span>
 </pre></div>
 
 
-<div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<div class="codehilite"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span><span class="n">i</span><span class="p">])</span>
@@ -487,9 +487,9 @@ dtype: bool
 </pre></div>
 
 
-<p><img alt="png" src="output_15_0.png" /></p>
+<p><img alt="png" src="output_15_0.png"></p>
 <h3 id="_5">相关性分析</h3>
-<div class="highlight"><pre><span></span><span class="n">corr_all</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">corr_all</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;date&#39;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 
 <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
 <span class="n">mask</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices_from</span><span class="p">(</span><span class="n">mask</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">True</span>
@@ -503,12 +503,12 @@ dtype: bool
 </pre></div>
 
 
-<p><img alt="png" src="output_17_0.png" /></p>
-<p>对于pm2.5来说没有看到比较强的相关指标<br />
-可以看到露水和温度呈现正相关特征<br />
-气压和露水呈现负相关特征<br />
+<p><img alt="png" src="output_17_0.png"></p>
+<p>对于pm2.5来说没有看到比较强的相关指标<br>
+可以看到露水和温度呈现正相关特征<br>
+气压和露水呈现负相关特征<br>
 气压和温度呈现负相关特征</p>
-<div class="highlight"><pre><span></span>
+<div class="codehilite"><pre><span></span>
 </pre></div>
             </div>
             <div class="entry-content jumbotron" id="source-content" style="display: none">
