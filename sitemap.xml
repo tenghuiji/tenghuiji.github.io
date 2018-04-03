@@ -5,100 +5,100 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>//tenghuiji.github.io/</loc>
-<lastmod>2018-04-03T14:07:10-00:00</lastmod>
+<lastmod>2018-04-03T14:36:17-00:00</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/archives.html</loc>
-<lastmod>2018-04-03T14:07:10-00:00</lastmod>
+<lastmod>2018-04-03T14:36:17-00:00</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/tags.html</loc>
-<lastmod>2018-04-03T14:07:10-00:00</lastmod>
+<lastmod>2018-04-03T14:36:17-00:00</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/categories.html</loc>
-<lastmod>2018-04-03T14:07:10-00:00</lastmod>
+<lastmod>2018-04-03T14:36:17-00:00</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/spider-tianyancha.html</loc>
 <lastmod>2018-03-26T20:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.5</priority>
+<priority>0.7</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/Correlation_Analysis.html</loc>
 <lastmod>2017-10-12T18:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.5</priority>
+<priority>0.7</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/pm25-correlation-analysis.html</loc>
 <lastmod>2010-12-04T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.5</priority>
+<priority>0.7</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/my-first-review.html</loc>
 <lastmod>2010-12-03T10:20:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
-<priority>0.5</priority>
+<priority>0.7</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/category/correlation-analysis.html</loc>
 <lastmod>2017-10-12T18:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/category/review.html</loc>
 <lastmod>2010-12-03T10:20:00+08:06</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/category/spider.html</loc>
 <lastmod>2018-03-26T20:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/tag/python-selenium-beautifulsoup-xpath.html</loc>
 <lastmod>2018-03-26T20:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/tag/python-correlation-analysis.html</loc>
 <lastmod>2017-10-12T18:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 <url>
 <loc>//tenghuiji.github.io/author/tenghuiji.html</loc>
 <lastmod>2018-03-26T20:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 
 </urlset>
