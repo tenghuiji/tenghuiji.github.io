@@ -39,6 +39,7 @@
     <link href="//tenghuiji.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="//tenghuiji.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="//tenghuiji.github.io/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
         <link href="//tenghuiji.github.io/theme/css/html4css1.css" rel="stylesheet">
     <link rel="stylesheet" href="//tenghuiji.github.io/theme/css/style.css" type="text/css"/>
 
@@ -114,6 +115,30 @@ Tenghuiji's Blog            </a>
 
 
 
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg hidden-xl">
+                <li class="dropdown hidden-md hidden-lg hidden-xl">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                        <i class="fa fa-search"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><span>
+                        <form class="navbar-search" action="/search.html">
+                          <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                        </form></span>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-right navbar-form hidden-xs">
+              <li><span>
+                <form class="navbar-search" action="/search.html">
+                  <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
 
             <ul class="nav navbar-nav navbar-right hidden-xs">
               <li><a href="//tenghuiji.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">        All
@@ -179,20 +204,16 @@ Tenghuiji's Blog            </a>
                 </div>
                 <div class="panel-body">
                     <div class="summary"><h1 id="pm25">北京PM2.5相关性分析</h1>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span>
-<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span></span>
+<span class="code-line"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span></span>
 </pre></div>
-
-
 <h4 id="_1">加载原始数据</h4>
-<div class="codehilite"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;./dataset/beijing.csv&#39;</span><span class="p">)</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing.csv'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span></span>
 </pre></div>
-
-
 <div>
 <style>
     .dataframe thead tr:only-child th {
@@ -207,11 +228,11 @@ Tenghuiji's Blog            </a>
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>No …</th></tr></thead></table></div>
+<table border="1" class="dataframe table-striped table table-hover">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>No …</th></tr></thead></table></div>
                     </div>
                 </div>
             </article>
@@ -270,6 +291,16 @@ Tenghuiji's Blog            </a>
     </div>
 <div class="panel-body">
     <ul class="list-group list-inline tagcloud" id="tags">
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-selenium-beautifulsoup-xpath.html">
+                    python selenium BeautifulSoup xpath <sup> 1</sup>
+                </a>
+            </li>
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-correlation-analysis.html">
+                    python Correlation Analysis <sup> 1</sup>
+                </a>
+            </li>
     </ul>
 </div>
 </div>

@@ -46,6 +46,7 @@
     <link href="//tenghuiji.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="//tenghuiji.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="//tenghuiji.github.io/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
         <link href="//tenghuiji.github.io/theme/css/html4css1.css" rel="stylesheet">
     <link rel="stylesheet" href="//tenghuiji.github.io/theme/css/style.css" type="text/css"/>
 
@@ -121,6 +122,30 @@ Tenghuiji's Blog            </a>
 
 
 
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg hidden-xl">
+                <li class="dropdown hidden-md hidden-lg hidden-xl">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                        <i class="fa fa-search"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><span>
+                        <form class="navbar-search" action="/search.html">
+                          <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                        </form></span>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-right navbar-form hidden-xs">
+              <li><span>
+                <form class="navbar-search" action="/search.html">
+                  <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
 
             <ul class="nav navbar-nav navbar-right hidden-xs">
               <li><a href="//tenghuiji.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">        All
@@ -188,18 +213,18 @@ Tenghuiji's Blog            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="天眼查爬虫">天眼查爬虫<a class="anchor-link" href="#天眼查爬虫">¶</a></h1><p>2018-1-21<br />
-marking的同事跑过来求帮忙，能不能通过爬虫帮他，根据会议收集表格中，人员名单所填写的公司名称添加一列行业信息。<br />
-他目前是手工到天眼输入公司名称，然后再取出觉得匹配的公司，最后在找到行业分类。但是人员明天太多了，做这么枯燥的工作他要疯了:(<br />
+<h1 id="天眼查爬虫">天眼查爬虫<a class="anchor-link" href="#天眼查爬虫">¶</a></h1><p>2018-1-21<br/>
+marking的同事跑过来求帮忙，能不能通过爬虫帮他，根据会议收集表格中，人员名单所填写的公司名称添加一列行业信息。<br/>
+他目前是手工到天眼输入公司名称，然后再取出觉得匹配的公司，最后在找到行业分类。但是人员明天太多了，做这么枯燥的工作他要疯了:(<br/>
 我觉得这个应该比较简单，答应他帮他写个爬虫</p>
-<h6 id="确定爬取方式">确定爬取方式<a class="anchor-link" href="#确定爬取方式">¶</a></h6><p>selenium是个自动化测试工具，他可以通过浏览器来模拟各种操作实现测试页面功能<br />
-BeautifulSoup是个爬虫常用的Dom解析工具<br />
+<h6 id="确定爬取方式">确定爬取方式<a class="anchor-link" href="#确定爬取方式">¶</a></h6><p>selenium是个自动化测试工具，他可以通过浏览器来模拟各种操作实现测试页面功能<br/>
+BeautifulSoup是个爬虫常用的Dom解析工具<br/>
 lxml提供了xpath获取方法，强烈推荐通过xpath访问节点，配合Chrome的inspect工具中的 copy xpath可以节省大量的节点获取工作量</p>
-<h6 id="安装必要的工具">安装必要的工具<a class="anchor-link" href="#安装必要的工具">¶</a></h6><p>pip install selenium<br />
-pip install lxml<br />
-pip install beautifulsoup4<br />
-下载最新的chromedriver<br />
-<a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a><br />
+<h6 id="安装必要的工具">安装必要的工具<a class="anchor-link" href="#安装必要的工具">¶</a></h6><p>pip install selenium<br/>
+pip install lxml<br/>
+pip install beautifulsoup4<br/>
+下载最新的chromedriver<br/>
+<a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a><br/>
 我是mac 安装到/usr/local/bin/目录下，然后运行 chromedriver -v查看是否安装好了</p>
 <h6 id="常见问题">常见问题<a class="anchor-link" href="#常见问题">¶</a></h6><ol>
 <li>公司名称不存在；在天眼搜里面找不到公司名称就在程序中填写none或者其他的字符说明  </li>
@@ -214,16 +239,16 @@ pip install beautifulsoup4<br />
 <div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span>
-<span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="k">import</span> <span class="n">TimeoutException</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="k">import</span> <span class="n">WebDriverWait</span>
-<span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="k">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span>
-<span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span>
-<span class="kn">import</span> <span class="nn">time</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="k">import</span> <span class="n">TimeoutException</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="k">import</span> <span class="n">WebDriverWait</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="k">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">time</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">random</span></span>
 </pre></div>
 </div>
 </div>
@@ -234,80 +259,80 @@ pip install beautifulsoup4<br />
 <div class="prompt input_prompt">In [31]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">keywords</span><span class="p">):</span>
-    <span class="c1"># print('正在搜索:{}'.format(keywords))</span>
-    <span class="k">try</span><span class="p">:</span>
-        <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://www.tianyancha.com/'</span><span class="p">)</span>
-        <span class="c1"># 找到输入框</span>
-        <span class="nb">input</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
-            <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">(</span>
-                <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span>
-                 <span class="s1">'.main-tab-outer .main-tab-body .inputV2 input'</span><span class="p">)))</span>
-        <span class="c1"># input.send_keys(keywords.decode('utf-8'))#中英混输入可防止乱码</span>
-        <span class="nb">input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">keywords</span><span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="n">submit</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
-            <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">(</span>
-                <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span>
-                 <span class="s1">'.mainv2_tab1 .inputV2 .search_button.white-btn'</span><span class="p">)))</span>
-        <span class="n">submit</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="c1"># 获取打开的多个窗口句柄</span>
-        <span class="n">windows</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="c1"># 切换到当前最新打开的窗口</span>
-        <span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">windows</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="c1"># 用目标元素参考去拖动</span>
-        <span class="n">target_elem</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span>
-            <span class="s1">'//*[@id="web-content"]/div/div/div/div[1]/div[3]/div[1]/div[1]'</span><span class="p">)</span>
-        <span class="n">js</span> <span class="o">=</span> <span class="s1">'arguments[0].scrollIntoView();'</span>
-        <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="n">js</span><span class="p">,</span> <span class="n">target_elem</span><span class="p">)</span>
-
-        <span class="c1"># 在搜索结果中获取第一个公司</span>
-        <span class="n">top1</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
-            <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span>
-                                        <span class="s1">'.search_result_container a'</span><span class="p">)))</span>
-        <span class="n">top1</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-
-        <span class="c1"># 关闭当前窗口</span>
-        <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-        <span class="c1"># 获取打开的多个窗口句柄</span>
-        <span class="n">windows</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="c1"># 切换到当前最新打开的窗口</span>
-        <span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">windows</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-
-        <span class="c1"># 等待页面全部加载完成</span>
-        <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span>
-            <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_all_elements_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span>
-                                                 <span class="s1">'#_container_baseInfo'</span><span class="p">)))</span>
-        <span class="n">selector</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span>
-
-        <span class="c1"># 获取公司名称</span>
-        <span class="n">company_name</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
-            <span class="s1">'//*[@id="company_web_top"]/div[2]/div[2]/div[1]/span/text()'</span><span class="p">)</span>
-        <span class="c1"># 获取公司信息表格中的行业信息xpath //*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()</span>
-        <span class="n">links</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span>
-            <span class="s1">'//*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()'</span>
-        <span class="p">)</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
-        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span>
-            <span class="n">s</span> <span class="o">=</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="n">company_name</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-                                                    <span class="n">link</span><span class="p">)</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-            <span class="k">return</span> <span class="n">s</span>
-        <span class="c1"># browser.close()</span>
-    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
-        <span class="n">s</span> <span class="o">=</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">))</span>
-        <span class="k">return</span> <span class="n">s</span>
-        <span class="c1">#pass</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">keywords</span><span class="p">):</span></span>
+<span class="code-line">    <span class="c1"># print('正在搜索:{}'.format(keywords))</span></span>
+<span class="code-line">    <span class="k">try</span><span class="p">:</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://www.tianyancha.com/'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="c1"># 找到输入框</span></span>
+<span class="code-line">        <span class="nb">input</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">(</span></span>
+<span class="code-line">                <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                 <span class="s1">'.main-tab-outer .main-tab-body .inputV2 input'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="c1"># input.send_keys(keywords.decode('utf-8'))#中英混输入可防止乱码</span></span>
+<span class="code-line">        <span class="nb">input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">keywords</span><span class="p">)</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="n">submit</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">(</span></span>
+<span class="code-line">                <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                 <span class="s1">'.mainv2_tab1 .inputV2 .search_button.white-btn'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="n">submit</span><span class="o">.</span><span class="n">click</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 获取打开的多个窗口句柄</span></span>
+<span class="code-line">        <span class="n">windows</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="c1"># 切换到当前最新打开的窗口</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">windows</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 用目标元素参考去拖动</span></span>
+<span class="code-line">        <span class="n">target_elem</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span></span>
+<span class="code-line">            <span class="s1">'//*[@id="web-content"]/div/div/div/div[1]/div[3]/div[1]/div[1]'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="n">js</span> <span class="o">=</span> <span class="s1">'arguments[0].scrollIntoView();'</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="n">js</span><span class="p">,</span> <span class="n">target_elem</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 在搜索结果中获取第一个公司</span></span>
+<span class="code-line">        <span class="n">top1</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                                        <span class="s1">'.search_result_container a'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="n">top1</span><span class="o">.</span><span class="n">click</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 关闭当前窗口</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 获取打开的多个窗口句柄</span></span>
+<span class="code-line">        <span class="n">windows</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="c1"># 切换到当前最新打开的窗口</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">windows</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 等待页面全部加载完成</span></span>
+<span class="code-line">        <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_all_elements_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                                                 <span class="s1">'#_container_baseInfo'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="n">selector</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 获取公司名称</span></span>
+<span class="code-line">        <span class="n">company_name</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span></span>
+<span class="code-line">            <span class="s1">'//*[@id="company_web_top"]/div[2]/div[2]/div[1]/span/text()'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="c1"># 获取公司信息表格中的行业信息xpath //*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()</span></span>
+<span class="code-line">        <span class="n">links</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span></span>
+<span class="code-line">            <span class="s1">'//*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()'</span></span>
+<span class="code-line">        <span class="p">)</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span></span>
+<span class="code-line">            <span class="n">s</span> <span class="o">=</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="n">company_name</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span></span>
+<span class="code-line">                                                    <span class="n">link</span><span class="p">)</span></span>
+<span class="code-line">            <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></span>
+<span class="code-line">            <span class="k">return</span> <span class="n">s</span></span>
+<span class="code-line">        <span class="c1"># browser.close()</span></span>
+<span class="code-line">    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span></span>
+<span class="code-line">        <span class="n">s</span> <span class="o">=</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="nb">print</span><span class="p">(</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">))</span></span>
+<span class="code-line">        <span class="k">return</span> <span class="n">s</span></span>
+<span class="code-line">        <span class="c1">#pass</span></span>
 </pre></div>
 </div>
 </div>
@@ -318,24 +343,24 @@ pip install beautifulsoup4<br />
 <div class="prompt input_prompt">In [36]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#跟新数据</span>
-<span class="k">def</span> <span class="nf">updateString</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span>
-
-<span class="c1">#提取查找输入的公司名称</span>
-<span class="k">def</span> <span class="nf">splitCompanyNameColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span>
-
-<span class="c1">#提取找到的公司名称</span>
-<span class="k">def</span> <span class="nf">splitFindCompanyNameColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span>
-
-<span class="c1">#提取找到的所属行业</span>
-<span class="k">def</span> <span class="nf">splitIndustryColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1">#跟新数据</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">updateString</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#提取查找输入的公司名称</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">splitCompanyNameColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#提取找到的公司名称</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">splitFindCompanyNameColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#提取找到的所属行业</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">splitIndustryColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span></span>
 </pre></div>
 </div>
 </div>
@@ -346,31 +371,31 @@ pip install beautifulsoup4<br />
 <div class="prompt input_prompt">In [39]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 启动浏览器，executable_path路径要根据自己chromedriver.exe的位置更改</span>
-<span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="sa">r</span><span class="s1">'/usr/local/bin/chromedriver'</span><span class="p">)</span>
-<span class="c1"># 设置浏览器窗口位置及大小</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">set_window_rect</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span>
-<span class="c1"># 设定页面加载限制时间</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">set_page_load_timeout</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-<span class="c1"># 设置锁定标签等待时长</span>
-<span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">browser</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/Jam_data_analysis.csv'</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'公司'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">search</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'公司名称'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitCompanyNameColumn</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">updateString</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'找到的公司'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitFindCompanyNameColumn</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">updateString</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">'所属行业'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitIndustryColumn</span><span class="p">)</span>
-
-<span class="c1">#删除临时字段</span>
-<span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span>
-
-<span class="c1">#关闭浏览器</span>
-<span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="c1">#保存结果到csv文件中</span>
-<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'./dataset/output.csv'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1"># 启动浏览器，executable_path路径要根据自己chromedriver.exe的位置更改</span></span>
+<span class="code-line"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="sa">r</span><span class="s1">'/usr/local/bin/chromedriver'</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># 设置浏览器窗口位置及大小</span></span>
+<span class="code-line"><span class="n">browser</span><span class="o">.</span><span class="n">set_window_rect</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># 设定页面加载限制时间</span></span>
+<span class="code-line"><span class="n">browser</span><span class="o">.</span><span class="n">set_page_load_timeout</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># 设置锁定标签等待时长</span></span>
+<span class="code-line"><span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">browser</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/Jam_data_analysis.csv'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'公司'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">search</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'公司名称'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitCompanyNameColumn</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">updateString</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'找到的公司'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitFindCompanyNameColumn</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">updateString</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'所属行业'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitIndustryColumn</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#删除临时字段</span></span>
+<span class="code-line"><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#关闭浏览器</span></span>
+<span class="code-line"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#保存结果到csv文件中</span></span>
+<span class="code-line"><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'./dataset/output.csv'</span><span class="p">)</span></span>
 </pre></div>
 </div>
 </div>
@@ -380,37 +405,36 @@ pip install beautifulsoup4<br />
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业
-公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN
-公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN
-0    公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业
-1             公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN
-2                公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN
-Name: 临时, dtype: object
-公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业
-公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN
-公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN
-0    找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业
-1                  找到的公司:NaN,所属行业:NaN
-2                  找到的公司:NaN,所属行业:NaN
-Name: 临时, dtype: object
-找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业
-找到的公司:NaN,所属行业:NaN
-找到的公司:NaN,所属行业:NaN
-0    所属行业:科技推广和应用服务业
-1           所属行业:NaN
-2           所属行业:NaN
-Name: 临时, dtype: object
-所属行业:科技推广和应用服务业
-所属行业:NaN
-所属行业:NaN
+<pre><span class="code-line">公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">0    公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">1             公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">2                公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">Name: 临时, dtype: object</span>
+<span class="code-line">公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">0    找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">1                  找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">2                  找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">Name: 临时, dtype: object</span>
+<span class="code-line">找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">0    所属行业:科技推广和应用服务业</span>
+<span class="code-line">1           所属行业:NaN</span>
+<span class="code-line">2           所属行业:NaN</span>
+<span class="code-line">Name: 临时, dtype: object</span>
+<span class="code-line">所属行业:科技推广和应用服务业</span>
+<span class="code-line">所属行业:NaN</span>
+<span class="code-line">所属行业:NaN</span>
 </pre>
 </div>
 </div>
 </div>
 </div>
 </div>
-
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -450,6 +474,11 @@ Name: 临时, dtype: object
 
             <div class="row" id="prevnext">
                 <div class="col-xs-12">
+                    <a href="//tenghuiji.github.io/Correlation_Analysis.html" class="btn btn-default btn-lg" style="float:left;clear:both;background-color:#fff;">
+                        <h4><i class="fa fa-arrow-left"></i>
+                        北京 PM2.5 相关性分析
+                        </h4>
+                    </a>
                 </div>
                 <div class="col-xs-12">
                 </div>
@@ -515,6 +544,16 @@ Name: 临时, dtype: object
     </div>
 <div class="panel-body">
     <ul class="list-group list-inline tagcloud" id="tags">
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-selenium-beautifulsoup-xpath.html">
+                    python selenium BeautifulSoup xpath <sup> 1</sup>
+                </a>
+            </li>
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-correlation-analysis.html">
+                    python Correlation Analysis <sup> 1</sup>
+                </a>
+            </li>
     </ul>
 </div>
 </div>

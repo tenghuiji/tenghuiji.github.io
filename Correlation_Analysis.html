@@ -46,6 +46,7 @@
     <link href="//tenghuiji.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
 
     <link href="//tenghuiji.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="//tenghuiji.github.io/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
         <link href="//tenghuiji.github.io/theme/css/html4css1.css" rel="stylesheet">
     <link rel="stylesheet" href="//tenghuiji.github.io/theme/css/style.css" type="text/css"/>
 
@@ -121,6 +122,30 @@ Tenghuiji's Blog            </a>
 
 
 
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg hidden-xl">
+                <li class="dropdown hidden-md hidden-lg hidden-xl">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                        <i class="fa fa-search"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><span>
+                        <form class="navbar-search" action="/search.html">
+                          <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                        </form></span>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-right navbar-form hidden-xs">
+              <li><span>
+                <form class="navbar-search" action="/search.html">
+                  <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
 
             <ul class="nav navbar-nav navbar-right hidden-xs">
               <li><a href="//tenghuiji.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">        All
@@ -197,11 +222,11 @@ Tenghuiji's Blog            </a>
 <div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-<span class="o">%</span><span class="k">matplotlib</span> inline 
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span></span>
+<span class="code-line"><span class="o">%</span><span class="k">matplotlib</span> inline </span>
 </pre></div>
 </div>
 </div>
@@ -220,8 +245,8 @@ Tenghuiji's Blog            </a>
 <div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing.csv'</span><span class="p">)</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing.csv'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span></span>
 </pre></div>
 </div>
 </div>
@@ -245,7 +270,7 @@ Tenghuiji's Blog            </a>
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe table-striped table table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -357,18 +382,18 @@ Tenghuiji's Blog            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>No: row number<br />
-year: year of data in this row<br />
-month: month of data in this row<br />
-day: day of data in this row<br />
-hour: hour of data in this row<br />
-pm2.5: PM2.5 concentration (ug/m^3)<br />
-DEWP: Dew Point (â„ƒ)<br />
-TEMP: Temperature (â„ƒ)<br />
-PRES: Pressure (hPa)<br />
-cbwd: Combined wind direction<br />
-Iws: Cumulated wind speed (m/s)<br />
-Is: Cumulated hours of snow<br />
+<p>No: row number<br/>
+year: year of data in this row<br/>
+month: month of data in this row<br/>
+day: day of data in this row<br/>
+hour: hour of data in this row<br/>
+pm2.5: PM2.5 concentration (ug/m^3)<br/>
+DEWP: Dew Point (â„ƒ)<br/>
+TEMP: Temperature (â„ƒ)<br/>
+PRES: Pressure (hPa)<br/>
+cbwd: Combined wind direction<br/>
+Iws: Cumulated wind speed (m/s)<br/>
+Is: Cumulated hours of snow<br/>
 Ir: Cumulated hours of rain</p>
 </div>
 </div>
@@ -386,12 +411,12 @@ Ir: Cumulated hours of rain</p>
 <div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing.csv'</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-                      <span class="n">date_parser</span><span class="o">=</span><span class="k">lambda</span> <span class="n">date</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span><span class="s1">'%Y %m </span><span class="si">%d</span><span class="s1"> %H'</span><span class="p">))</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'No'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">'date'</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pollution'</span><span class="p">,</span> <span class="s1">'dew'</span><span class="p">,</span> <span class="s1">'temp'</span><span class="p">,</span> <span class="s1">'press'</span><span class="p">,</span> <span class="s1">'wnd_dir'</span><span class="p">,</span> <span class="s1">'wnd_spd'</span><span class="p">,</span> <span class="s1">'snow'</span><span class="p">,</span> <span class="s1">'rain'</span><span class="p">]</span>
-<span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing.csv'</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span></span>
+<span class="code-line">                      <span class="n">date_parser</span><span class="o">=</span><span class="k">lambda</span> <span class="n">date</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span><span class="s1">'%Y %m </span><span class="si">%d</span><span class="s1"> %H'</span><span class="p">))</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'No'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">'date'</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pollution'</span><span class="p">,</span> <span class="s1">'dew'</span><span class="p">,</span> <span class="s1">'temp'</span><span class="p">,</span> <span class="s1">'press'</span><span class="p">,</span> <span class="s1">'wnd_dir'</span><span class="p">,</span> <span class="s1">'wnd_spd'</span><span class="p">,</span> <span class="s1">'snow'</span><span class="p">,</span> <span class="s1">'rain'</span><span class="p">]</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></span>
 </pre></div>
 </div>
 </div>
@@ -415,7 +440,7 @@ Ir: Cumulated hours of rain</p>
         vertical-align: top;
     }
 </style>
-<table border="1" class="dataframe">
+<table border="1" class="dataframe table-striped table table-hover">
 <thead>
 <tr style="text-align: right;">
 <th></th>
@@ -509,7 +534,7 @@ Ir: Cumulated hours of rain</p>
 <div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">()</span></span>
 </pre></div>
 </div>
 </div>
@@ -519,15 +544,15 @@ Ir: Cumulated hours of rain</p>
 <div class="output_area">
 <div class="prompt output_prompt">Out[6]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>pollution     True
-dew          False
-temp         False
-press        False
-wnd_dir      False
-wnd_spd      False
-snow         False
-rain         False
-dtype: bool</pre>
+<pre><span class="code-line">pollution     True</span>
+<span class="code-line">dew          False</span>
+<span class="code-line">temp         False</span>
+<span class="code-line">press        False</span>
+<span class="code-line">wnd_dir      False</span>
+<span class="code-line">wnd_spd      False</span>
+<span class="code-line">snow         False</span>
+<span class="code-line">rain         False</span>
+<span class="code-line">dtype: bool</span></pre>
 </div>
 </div>
 </div>
@@ -538,8 +563,8 @@ dtype: bool</pre>
 <div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#缺失数据用平均值填充</span>
-<span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s1">'pollution'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1">#缺失数据用平均值填充</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s1">'pollution'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></span>
 </pre></div>
 </div>
 </div>
@@ -550,7 +575,7 @@ dtype: bool</pre>
 <div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span></span>
 </pre></div>
 </div>
 </div>
@@ -560,7 +585,7 @@ dtype: bool</pre>
 <div class="output_area">
 <div class="prompt output_prompt">Out[8]:</div>
 <div class="output_text output_subarea output_execute_result">
-<pre>array(['NW', 'cv', 'NE', 'SE'], dtype=object)</pre>
+<pre><span class="code-line">array(['NW', 'cv', 'NE', 'SE'], dtype=object)</span></pre>
 </div>
 </div>
 </div>
@@ -571,7 +596,7 @@ dtype: bool</pre>
 <div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">'NW'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">'cv'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">'NE'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">'SE'</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">'NW'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">'cv'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">'NE'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">'SE'</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span></span>
 </pre></div>
 </div>
 </div>
@@ -590,7 +615,7 @@ dtype: bool</pre>
 <div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">)</span></span>
 </pre></div>
 </div>
 </div>
@@ -609,9 +634,9 @@ dtype: bool</pre>
 <div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">)</span>
-<span class="n">series</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">series_values</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float32'</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">series</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span></span>
+<span class="code-line"><span class="n">series_values</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float32'</span><span class="p">)</span></span>
 </pre></div>
 </div>
 </div>
@@ -622,12 +647,12 @@ dtype: bool</pre>
 <div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span><span class="n">i</span><span class="p">])</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">'right'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span></span>
+<span class="code-line">    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span></span>
+<span class="code-line">    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span><span class="n">i</span><span class="p">])</span></span>
+<span class="code-line">    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">'right'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span>
 </pre></div>
 </div>
 </div>
@@ -637,7 +662,7 @@ dtype: bool</pre>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABJcAAAJzCAYAAACyDPJGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+<img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABJcAAAJzCAYAAACyDPJGAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzsnXeYFEX6x7+17AIqIoiKRxBRECOoh+id8nPNYkT0FHNA
 PU/PMwfUE8w5nuHOCJ4BPRPcmRUxB1SCBEFFgkQlZza8vz9qXqu6urqnJ+3szr6f5+lnenp6uqu7
 0ltvve9bioggCIIgCIIgCIIgCIIgCNlQVuwECIIgCIIgCIIgCIIgCA0XUS4JgiAIgiAIgiAIgiAI
@@ -3214,7 +3239,7 @@ VoZT5rWzpcibOp6xDcCASL6vR7KdHx2nbmdwS5E3dTvjG4ChcKuHUb8zvsXkXVX91uXnCCGEEEII
 IYQQQggpmVqaFkcIIYQQQgghhBBCuhg0LhFCCCGEEEIIIYSQsqFxiRBCCCGEEEIIIYSUDY1LhBBC
 CCGEEEIIIaRsaFwihBBCCCGEEEIIIWVD4xIhhBBCCCGEEEIIKRsalwghhBBCCCGEEEJI2dC4RAgh
 hBBCCCGEEELK5v8B8+W3pVeoh4oAAAAASUVORK5CYII=
-" />
+"/>
 </div>
 </div>
 </div>
@@ -3233,17 +3258,17 @@ hBBCCCGEEELK5v8B8+W3pVeoh4oAAAAASUVORK5CYII=
 <div class="prompt input_prompt">In [13]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">corr_all</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
-
-<span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span>
-<span class="n">mask</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices_from</span><span class="p">(</span><span class="n">mask</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-
-<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span><span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">,</span><span class="n">linewidths</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-            <span class="n">cmap</span><span class="o">=</span><span class="s2">"YlGnBu"</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'./Correlation_Analysis.pdf'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="n">corr_all</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">mask</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices_from</span><span class="p">(</span><span class="n">mask</span><span class="p">)]</span> <span class="o">=</span> <span class="kc">True</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span><span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">,</span><span class="n">linewidths</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> </span>
+<span class="code-line">            <span class="n">cmap</span><span class="o">=</span><span class="s2">"YlGnBu"</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'./Correlation_Analysis.pdf'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span>
 </pre></div>
 </div>
 </div>
@@ -3253,7 +3278,7 @@ hBBCCCGEEELK5v8B8+W3pVeoh4oAAAAASUVORK5CYII=
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbUAAAFsCAYAAABLmyc6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+<img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAbUAAAFsCAYAAABLmyc6AAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzs3Xd8VFX6x/HPM5PeK4RAQhJAqnSUIk1FBddeUHFtK7qr
 rnX9qWsXbGtdK9ixoFjXLijSFFR6BykJPT2B9Dbn98cMISEBMpmZlMnz3tds5t45d+43cZKHc84t
 YoxBKaWU8gaW5g6glFJKuYsWNaWUUl5Di5pSSimvoUVNKaWU19CippRSymtoUVNKKeU1fDz1xiKi
@@ -3675,7 +3700,7 @@ BqwBI/3s47UDV9KxBu3UDhQZjVW4b8BaLqRZA0V00629Nl8uPZMEfGyMaVZTkOI/2MOVi40xT/kg
 bs0XnQARKTbGRDTtU1H8C52lX1GUExCRImNMQ33WiuLXqFFTFC9g/0D4LeoPqCg3xkzsOFXH8Hd9
 iuIt1KgpiqIoXYZONceeoiiKopwMNWqKoihKl0GNmqIoitJlUKOmKIqidBn+D5FmDtB09feKAAAA
 AElFTkSuQmCC
-" />
+"/>
 </div>
 </div>
 </div>
@@ -3685,9 +3710,9 @@ AElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>对于pm2.5来说没有看到比较强的相关指标<br />
-可以看到露水和温度呈现正相关特征<br />
-气压和露水呈现负相关特征<br />
+<p>对于pm2.5来说没有看到比较强的相关指标<br/>
+可以看到露水和温度呈现正相关特征<br/>
+气压和露水呈现负相关特征<br/>
 气压和温度呈现负相关特征</p>
 </div>
 </div>
@@ -3697,18 +3722,18 @@ AElFTkSuQmCC
 <div class="prompt input_prompt">In [14]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sqrt</span>
-<span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">concatenate</span>
-<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span>
-<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">read_csv</span>
-<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">DataFrame</span>
-<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">concat</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">LabelEncoder</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">mean_squared_error</span>
-<span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Sequential</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Dense</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">LSTM</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="k">import</span> <span class="n">sqrt</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">numpy</span> <span class="k">import</span> <span class="n">concatenate</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">read_csv</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">DataFrame</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">concat</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MinMaxScaler</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">LabelEncoder</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">mean_squared_error</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">keras.models</span> <span class="k">import</span> <span class="n">Sequential</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">Dense</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">keras.layers</span> <span class="k">import</span> <span class="n">LSTM</span></span>
 </pre></div>
 </div>
 </div>
@@ -3718,7 +3743,7 @@ AElFTkSuQmCC
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>Using TensorFlow backend.
+<pre><span class="code-line">Using TensorFlow backend.</span>
 </pre>
 </div>
 </div>
@@ -3730,29 +3755,29 @@ AElFTkSuQmCC
 <div class="prompt input_prompt">In [15]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># convert series to supervised learning</span>
-<span class="k">def</span> <span class="nf">series_to_supervised</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_in</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_out</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dropnan</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
-    <span class="n">n_vars</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span> <span class="k">else</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-    <span class="n">cols</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">()</span>
-    <span class="c1"># input sequence (t-n, ... t-1)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_in</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
-        <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t-</span><span class="si">%d</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_vars</span><span class="p">)]</span>
-    <span class="c1"># forecast sequence (t, t+1, ... t+n)</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_out</span><span class="p">):</span>
-        <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="n">i</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_vars</span><span class="p">)]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t+</span><span class="si">%d</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_vars</span><span class="p">)]</span>
-    <span class="c1"># put it all together</span>
-    <span class="n">agg</span> <span class="o">=</span> <span class="n">concat</span><span class="p">(</span><span class="n">cols</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">agg</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">names</span>
-    <span class="c1"># drop rows with NaN values</span>
-    <span class="k">if</span> <span class="n">dropnan</span><span class="p">:</span>
-        <span class="n">agg</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">agg</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1"># convert series to supervised learning</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">series_to_supervised</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">n_in</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_out</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">dropnan</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span></span>
+<span class="code-line">    <span class="n">n_vars</span> <span class="o">=</span> <span class="mi">1</span> <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="ow">is</span> <span class="nb">list</span> <span class="k">else</span> <span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span></span>
+<span class="code-line">    <span class="n">df</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span></span>
+<span class="code-line">    <span class="n">cols</span><span class="p">,</span> <span class="n">names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(),</span> <span class="nb">list</span><span class="p">()</span></span>
+<span class="code-line">    <span class="c1"># input sequence (t-n, ... t-1)</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_in</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span></span>
+<span class="code-line">        <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="n">i</span><span class="p">))</span></span>
+<span class="code-line">        <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t-</span><span class="si">%d</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_vars</span><span class="p">)]</span></span>
+<span class="code-line">    <span class="c1"># forecast sequence (t, t+1, ... t+n)</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_out</span><span class="p">):</span></span>
+<span class="code-line">        <span class="n">cols</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">shift</span><span class="p">(</span><span class="o">-</span><span class="n">i</span><span class="p">))</span></span>
+<span class="code-line">        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span></span>
+<span class="code-line">            <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_vars</span><span class="p">)]</span></span>
+<span class="code-line">        <span class="k">else</span><span class="p">:</span></span>
+<span class="code-line">            <span class="n">names</span> <span class="o">+=</span> <span class="p">[(</span><span class="s1">'var</span><span class="si">%d</span><span class="s1">(t+</span><span class="si">%d</span><span class="s1">)'</span> <span class="o">%</span> <span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n_vars</span><span class="p">)]</span></span>
+<span class="code-line">    <span class="c1"># put it all together</span></span>
+<span class="code-line">    <span class="n">agg</span> <span class="o">=</span> <span class="n">concat</span><span class="p">(</span><span class="n">cols</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></span>
+<span class="code-line">    <span class="n">agg</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">names</span></span>
+<span class="code-line">    <span class="c1"># drop rows with NaN values</span></span>
+<span class="code-line">    <span class="k">if</span> <span class="n">dropnan</span><span class="p">:</span></span>
+<span class="code-line">        <span class="n">agg</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">agg</span></span>
 </pre></div>
 </div>
 </div>
@@ -3763,24 +3788,24 @@ AElFTkSuQmCC
 <div class="prompt input_prompt">In [16]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load dataset</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">values</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">values</span>
-<span class="c1"># integer encode direction</span>
-<span class="n">encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-<span class="n">values</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">values</span><span class="p">[:,</span><span class="mi">4</span><span class="p">])</span>
-<span class="c1"># ensure all data is float</span>
-<span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float32'</span><span class="p">)</span>
-<span class="c1"># normalize features</span>
-<span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
-<span class="c1"># specify the number of lag hours</span>
-<span class="n">n_hours</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">n_features</span> <span class="o">=</span> <span class="mi">8</span>
-<span class="c1"># frame as supervised learning</span>
-<span class="n">reframed</span> <span class="o">=</span> <span class="n">series_to_supervised</span><span class="p">(</span><span class="n">scaled</span><span class="p">,</span> <span class="n">n_hours</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">reframed</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
- 
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1"># load dataset</span></span>
+<span class="code-line"><span class="n">dataset</span> <span class="o">=</span> <span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">values</span> <span class="o">=</span> <span class="n">dataset</span><span class="o">.</span><span class="n">values</span></span>
+<span class="code-line"><span class="c1"># integer encode direction</span></span>
+<span class="code-line"><span class="n">encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">values</span><span class="p">[:,</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">values</span><span class="p">[:,</span><span class="mi">4</span><span class="p">])</span></span>
+<span class="code-line"><span class="c1"># ensure all data is float</span></span>
+<span class="code-line"><span class="n">values</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float32'</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># normalize features</span></span>
+<span class="code-line"><span class="n">scaler</span> <span class="o">=</span> <span class="n">MinMaxScaler</span><span class="p">(</span><span class="n">feature_range</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span></span>
+<span class="code-line"><span class="n">scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">values</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># specify the number of lag hours</span></span>
+<span class="code-line"><span class="n">n_hours</span> <span class="o">=</span> <span class="mi">3</span></span>
+<span class="code-line"><span class="n">n_features</span> <span class="o">=</span> <span class="mi">8</span></span>
+<span class="code-line"><span class="c1"># frame as supervised learning</span></span>
+<span class="code-line"><span class="n">reframed</span> <span class="o">=</span> <span class="n">series_to_supervised</span><span class="p">(</span><span class="n">scaled</span><span class="p">,</span> <span class="n">n_hours</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span></span>
+<span class="code-line"><span class="nb">print</span><span class="p">(</span><span class="n">reframed</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></span>
+<span class="code-line"> </span>
 </pre></div>
 </div>
 </div>
@@ -3790,7 +3815,7 @@ AElFTkSuQmCC
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(43821, 32)
+<pre><span class="code-line">(43821, 32)</span>
 </pre>
 </div>
 </div>
@@ -3802,21 +3827,21 @@ AElFTkSuQmCC
 <div class="prompt input_prompt">In [17]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># split into train and test sets</span>
-<span class="n">values</span> <span class="o">=</span> <span class="n">reframed</span><span class="o">.</span><span class="n">values</span>
-<span class="n">n_train_hours</span> <span class="o">=</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">24</span>
-<span class="n">train</span> <span class="o">=</span> <span class="n">values</span><span class="p">[:</span><span class="n">n_train_hours</span><span class="p">,</span> <span class="p">:]</span>
-<span class="n">test</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">n_train_hours</span><span class="p">:,</span> <span class="p">:]</span>
-<span class="c1"># split into input and outputs</span>
-<span class="n">n_obs</span> <span class="o">=</span> <span class="n">n_hours</span> <span class="o">*</span> <span class="n">n_features</span>
-<span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span> <span class="o">=</span> <span class="n">train</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n_obs</span><span class="p">],</span> <span class="n">train</span><span class="p">[:,</span> <span class="o">-</span><span class="n">n_features</span><span class="p">]</span>
-<span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span> <span class="o">=</span> <span class="n">test</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n_obs</span><span class="p">],</span> <span class="n">test</span><span class="p">[:,</span> <span class="o">-</span><span class="n">n_features</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_X</span><span class="p">),</span> <span class="n">train_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-<span class="c1"># reshape input to be 3D [samples, timesteps, features]</span>
-<span class="n">train_X</span> <span class="o">=</span> <span class="n">train_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_hours</span><span class="p">,</span> <span class="n">n_features</span><span class="p">))</span>
-<span class="n">test_X</span> <span class="o">=</span> <span class="n">test_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">test_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_hours</span><span class="p">,</span> <span class="n">n_features</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">train_y</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">test_X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">test_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
- 
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1"># split into train and test sets</span></span>
+<span class="code-line"><span class="n">values</span> <span class="o">=</span> <span class="n">reframed</span><span class="o">.</span><span class="n">values</span></span>
+<span class="code-line"><span class="n">n_train_hours</span> <span class="o">=</span> <span class="mi">365</span> <span class="o">*</span> <span class="mi">24</span></span>
+<span class="code-line"><span class="n">train</span> <span class="o">=</span> <span class="n">values</span><span class="p">[:</span><span class="n">n_train_hours</span><span class="p">,</span> <span class="p">:]</span></span>
+<span class="code-line"><span class="n">test</span> <span class="o">=</span> <span class="n">values</span><span class="p">[</span><span class="n">n_train_hours</span><span class="p">:,</span> <span class="p">:]</span></span>
+<span class="code-line"><span class="c1"># split into input and outputs</span></span>
+<span class="code-line"><span class="n">n_obs</span> <span class="o">=</span> <span class="n">n_hours</span> <span class="o">*</span> <span class="n">n_features</span></span>
+<span class="code-line"><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span> <span class="o">=</span> <span class="n">train</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n_obs</span><span class="p">],</span> <span class="n">train</span><span class="p">[:,</span> <span class="o">-</span><span class="n">n_features</span><span class="p">]</span></span>
+<span class="code-line"><span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span> <span class="o">=</span> <span class="n">test</span><span class="p">[:,</span> <span class="p">:</span><span class="n">n_obs</span><span class="p">],</span> <span class="n">test</span><span class="p">[:,</span> <span class="o">-</span><span class="n">n_features</span><span class="p">]</span></span>
+<span class="code-line"><span class="nb">print</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">train_X</span><span class="p">),</span> <span class="n">train_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># reshape input to be 3D [samples, timesteps, features]</span></span>
+<span class="code-line"><span class="n">train_X</span> <span class="o">=</span> <span class="n">train_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_hours</span><span class="p">,</span> <span class="n">n_features</span><span class="p">))</span></span>
+<span class="code-line"><span class="n">test_X</span> <span class="o">=</span> <span class="n">test_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">test_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_hours</span><span class="p">,</span> <span class="n">n_features</span><span class="p">))</span></span>
+<span class="code-line"><span class="nb">print</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">train_y</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">test_X</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">test_y</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span></span>
+<span class="code-line"> </span>
 </pre></div>
 </div>
 </div>
@@ -3826,8 +3851,8 @@ AElFTkSuQmCC
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(8760, 24) 8760 (8760,)
-(8760, 3, 8) (8760,) (35061, 3, 8) (35061,)
+<pre><span class="code-line">(8760, 24) 8760 (8760,)</span>
+<span class="code-line">(8760, 3, 8) (8760,) (35061, 3, 8) (35061,)</span>
 </pre>
 </div>
 </div>
@@ -3839,18 +3864,18 @@ AElFTkSuQmCC
 <div class="prompt input_prompt">In [18]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># design network</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">'mae'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">'adam'</span><span class="p">)</span>
-<span class="c1"># fit network</span>
-<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">72</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="c1"># plot history</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'loss'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'train'</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'val_loss'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1"># design network</span></span>
+<span class="code-line"><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">LSTM</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">train_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span></span>
+<span class="code-line"><span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span></span>
+<span class="code-line"><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s1">'mae'</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s1">'adam'</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># fit network</span></span>
+<span class="code-line"><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_X</span><span class="p">,</span> <span class="n">train_y</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">72</span><span class="p">,</span> <span class="n">validation_data</span><span class="o">=</span><span class="p">(</span><span class="n">test_X</span><span class="p">,</span> <span class="n">test_y</span><span class="p">),</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># plot history</span></span>
+<span class="code-line"><span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'loss'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'train'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">pyplot</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">'val_loss'</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">'test'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">pyplot</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span></span>
+<span class="code-line"><span class="n">pyplot</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span>
 </pre></div>
 </div>
 </div>
@@ -3860,114 +3885,114 @@ AElFTkSuQmCC
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Train on 8760 samples, validate on 35061 samples
-Epoch 1/50
-2s - loss: 0.0533 - val_loss: 0.0423
-Epoch 2/50
-2s - loss: 0.0263 - val_loss: 0.0365
-Epoch 3/50
-3s - loss: 0.0205 - val_loss: 0.0222
-Epoch 4/50
-3s - loss: 0.0192 - val_loss: 0.0193
-Epoch 5/50
-3s - loss: 0.0188 - val_loss: 0.0190
-Epoch 6/50
-2s - loss: 0.0190 - val_loss: 0.0183
-Epoch 7/50
-2s - loss: 0.0188 - val_loss: 0.0179
-Epoch 8/50
-2s - loss: 0.0178 - val_loss: 0.0169
-Epoch 9/50
-2s - loss: 0.0175 - val_loss: 0.0173
-Epoch 10/50
-2s - loss: 0.0169 - val_loss: 0.0161
-Epoch 11/50
-2s - loss: 0.0166 - val_loss: 0.0164
-Epoch 12/50
-2s - loss: 0.0166 - val_loss: 0.0174
-Epoch 13/50
-3s - loss: 0.0161 - val_loss: 0.0157
-Epoch 14/50
-3s - loss: 0.0154 - val_loss: 0.0146
-Epoch 15/50
-2s - loss: 0.0149 - val_loss: 0.0142
-Epoch 16/50
-2s - loss: 0.0146 - val_loss: 0.0137
-Epoch 17/50
-2s - loss: 0.0144 - val_loss: 0.0135
-Epoch 18/50
-2s - loss: 0.0144 - val_loss: 0.0143
-Epoch 19/50
-2s - loss: 0.0142 - val_loss: 0.0136
-Epoch 20/50
-3s - loss: 0.0143 - val_loss: 0.0134
-Epoch 21/50
-2s - loss: 0.0139 - val_loss: 0.0135
-Epoch 22/50
-2s - loss: 0.0139 - val_loss: 0.0137
-Epoch 23/50
-2s - loss: 0.0140 - val_loss: 0.0134
-Epoch 24/50
-2s - loss: 0.0138 - val_loss: 0.0137
-Epoch 25/50
-2s - loss: 0.0142 - val_loss: 0.0138
-Epoch 26/50
-2s - loss: 0.0138 - val_loss: 0.0142
-Epoch 27/50
-2s - loss: 0.0142 - val_loss: 0.0134
-Epoch 28/50
-2s - loss: 0.0139 - val_loss: 0.0137
-Epoch 29/50
-2s - loss: 0.0138 - val_loss: 0.0136
-Epoch 30/50
-2s - loss: 0.0141 - val_loss: 0.0136
-Epoch 31/50
-2s - loss: 0.0138 - val_loss: 0.0137
-Epoch 32/50
-2s - loss: 0.0141 - val_loss: 0.0134
-Epoch 33/50
-2s - loss: 0.0137 - val_loss: 0.0136
-Epoch 34/50
-2s - loss: 0.0139 - val_loss: 0.0137
-Epoch 35/50
-2s - loss: 0.0138 - val_loss: 0.0138
-Epoch 36/50
-2s - loss: 0.0136 - val_loss: 0.0136
-Epoch 37/50
-2s - loss: 0.0142 - val_loss: 0.0138
-Epoch 38/50
-2s - loss: 0.0138 - val_loss: 0.0136
-Epoch 39/50
-2s - loss: 0.0140 - val_loss: 0.0137
-Epoch 40/50
-2s - loss: 0.0139 - val_loss: 0.0136
-Epoch 41/50
-2s - loss: 0.0141 - val_loss: 0.0136
-Epoch 42/50
-2s - loss: 0.0141 - val_loss: 0.0138
-Epoch 43/50
-2s - loss: 0.0141 - val_loss: 0.0144
-Epoch 44/50
-2s - loss: 0.0140 - val_loss: 0.0142
-Epoch 45/50
-2s - loss: 0.0140 - val_loss: 0.0143
-Epoch 46/50
-2s - loss: 0.0139 - val_loss: 0.0141
-Epoch 47/50
-2s - loss: 0.0138 - val_loss: 0.0143
-Epoch 48/50
-2s - loss: 0.0139 - val_loss: 0.0143
-Epoch 49/50
-2s - loss: 0.0139 - val_loss: 0.0145
-Epoch 50/50
-2s - loss: 0.0139 - val_loss: 0.0143
+<pre><span class="code-line">Train on 8760 samples, validate on 35061 samples</span>
+<span class="code-line">Epoch 1/50</span>
+<span class="code-line">2s - loss: 0.0533 - val_loss: 0.0423</span>
+<span class="code-line">Epoch 2/50</span>
+<span class="code-line">2s - loss: 0.0263 - val_loss: 0.0365</span>
+<span class="code-line">Epoch 3/50</span>
+<span class="code-line">3s - loss: 0.0205 - val_loss: 0.0222</span>
+<span class="code-line">Epoch 4/50</span>
+<span class="code-line">3s - loss: 0.0192 - val_loss: 0.0193</span>
+<span class="code-line">Epoch 5/50</span>
+<span class="code-line">3s - loss: 0.0188 - val_loss: 0.0190</span>
+<span class="code-line">Epoch 6/50</span>
+<span class="code-line">2s - loss: 0.0190 - val_loss: 0.0183</span>
+<span class="code-line">Epoch 7/50</span>
+<span class="code-line">2s - loss: 0.0188 - val_loss: 0.0179</span>
+<span class="code-line">Epoch 8/50</span>
+<span class="code-line">2s - loss: 0.0178 - val_loss: 0.0169</span>
+<span class="code-line">Epoch 9/50</span>
+<span class="code-line">2s - loss: 0.0175 - val_loss: 0.0173</span>
+<span class="code-line">Epoch 10/50</span>
+<span class="code-line">2s - loss: 0.0169 - val_loss: 0.0161</span>
+<span class="code-line">Epoch 11/50</span>
+<span class="code-line">2s - loss: 0.0166 - val_loss: 0.0164</span>
+<span class="code-line">Epoch 12/50</span>
+<span class="code-line">2s - loss: 0.0166 - val_loss: 0.0174</span>
+<span class="code-line">Epoch 13/50</span>
+<span class="code-line">3s - loss: 0.0161 - val_loss: 0.0157</span>
+<span class="code-line">Epoch 14/50</span>
+<span class="code-line">3s - loss: 0.0154 - val_loss: 0.0146</span>
+<span class="code-line">Epoch 15/50</span>
+<span class="code-line">2s - loss: 0.0149 - val_loss: 0.0142</span>
+<span class="code-line">Epoch 16/50</span>
+<span class="code-line">2s - loss: 0.0146 - val_loss: 0.0137</span>
+<span class="code-line">Epoch 17/50</span>
+<span class="code-line">2s - loss: 0.0144 - val_loss: 0.0135</span>
+<span class="code-line">Epoch 18/50</span>
+<span class="code-line">2s - loss: 0.0144 - val_loss: 0.0143</span>
+<span class="code-line">Epoch 19/50</span>
+<span class="code-line">2s - loss: 0.0142 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 20/50</span>
+<span class="code-line">3s - loss: 0.0143 - val_loss: 0.0134</span>
+<span class="code-line">Epoch 21/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0135</span>
+<span class="code-line">Epoch 22/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0137</span>
+<span class="code-line">Epoch 23/50</span>
+<span class="code-line">2s - loss: 0.0140 - val_loss: 0.0134</span>
+<span class="code-line">Epoch 24/50</span>
+<span class="code-line">2s - loss: 0.0138 - val_loss: 0.0137</span>
+<span class="code-line">Epoch 25/50</span>
+<span class="code-line">2s - loss: 0.0142 - val_loss: 0.0138</span>
+<span class="code-line">Epoch 26/50</span>
+<span class="code-line">2s - loss: 0.0138 - val_loss: 0.0142</span>
+<span class="code-line">Epoch 27/50</span>
+<span class="code-line">2s - loss: 0.0142 - val_loss: 0.0134</span>
+<span class="code-line">Epoch 28/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0137</span>
+<span class="code-line">Epoch 29/50</span>
+<span class="code-line">2s - loss: 0.0138 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 30/50</span>
+<span class="code-line">2s - loss: 0.0141 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 31/50</span>
+<span class="code-line">2s - loss: 0.0138 - val_loss: 0.0137</span>
+<span class="code-line">Epoch 32/50</span>
+<span class="code-line">2s - loss: 0.0141 - val_loss: 0.0134</span>
+<span class="code-line">Epoch 33/50</span>
+<span class="code-line">2s - loss: 0.0137 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 34/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0137</span>
+<span class="code-line">Epoch 35/50</span>
+<span class="code-line">2s - loss: 0.0138 - val_loss: 0.0138</span>
+<span class="code-line">Epoch 36/50</span>
+<span class="code-line">2s - loss: 0.0136 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 37/50</span>
+<span class="code-line">2s - loss: 0.0142 - val_loss: 0.0138</span>
+<span class="code-line">Epoch 38/50</span>
+<span class="code-line">2s - loss: 0.0138 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 39/50</span>
+<span class="code-line">2s - loss: 0.0140 - val_loss: 0.0137</span>
+<span class="code-line">Epoch 40/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 41/50</span>
+<span class="code-line">2s - loss: 0.0141 - val_loss: 0.0136</span>
+<span class="code-line">Epoch 42/50</span>
+<span class="code-line">2s - loss: 0.0141 - val_loss: 0.0138</span>
+<span class="code-line">Epoch 43/50</span>
+<span class="code-line">2s - loss: 0.0141 - val_loss: 0.0144</span>
+<span class="code-line">Epoch 44/50</span>
+<span class="code-line">2s - loss: 0.0140 - val_loss: 0.0142</span>
+<span class="code-line">Epoch 45/50</span>
+<span class="code-line">2s - loss: 0.0140 - val_loss: 0.0143</span>
+<span class="code-line">Epoch 46/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0141</span>
+<span class="code-line">Epoch 47/50</span>
+<span class="code-line">2s - loss: 0.0138 - val_loss: 0.0143</span>
+<span class="code-line">Epoch 48/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0143</span>
+<span class="code-line">Epoch 49/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0145</span>
+<span class="code-line">Epoch 50/50</span>
+<span class="code-line">2s - loss: 0.0139 - val_loss: 0.0143</span>
 </pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_png output_subarea ">
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYQAAAEACAYAAACznAEdAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
+<img class="img-responsive" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYQAAAEACAYAAACznAEdAAAABHNCSVQICAgIfAhkiAAAAAlwSFlz
 AAALEgAACxIB0t1+/AAAIABJREFUeJzt3Xt8FdW9///XJwkEQkK4JoEEAgKCoghegIJKilURL3j0
 V49+W6na39HjV3rsqceKnnOU09P2FPWLl2q1fqVV2nqhFyq0FNBiUFEuVYJUEkCQAIGE+y3cQvL5
 /jET2MQENrmQ7OT9fDzmsffMrJlZM2zmk7XWrFnm7oiIiMQ1dgZERKRpUEAQERFAAUFEREIKCCIi
@@ -4190,7 +4215,7 @@ j7h7T3c/i+D+MN/dbwdm0cKuhZklhSVozKwdcBWwglr8LppsP4TqOsM1cpbOqOo69BFE/t/Sgjrz
 mdlI4D2CH3hll/xHgCW0sI6NZnY+QeNgXDi96e4/aumdPM1sFPCAu9/QEq+FmfUGZhD830gAfhN2
 Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
 8P8AO94+f5pJgmIAAAAASUVORK5CYII=
-" />
+"/>
 </div>
 </div>
 </div>
@@ -4201,21 +4226,21 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
 <div class="prompt input_prompt">In [19]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># make a prediction</span>
-<span class="n">yhat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_X</span><span class="p">)</span>
-<span class="n">test_X</span> <span class="o">=</span> <span class="n">test_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">test_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_hours</span><span class="o">*</span><span class="n">n_features</span><span class="p">))</span>
-<span class="c1"># invert scaling for forecast</span>
-<span class="n">inv_yhat</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">yhat</span><span class="p">,</span> <span class="n">test_X</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">7</span><span class="p">:]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">inv_yhat</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">inv_yhat</span><span class="p">)</span>
-<span class="n">inv_yhat</span> <span class="o">=</span> <span class="n">inv_yhat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># invert scaling for actual</span>
-<span class="n">test_y</span> <span class="o">=</span> <span class="n">test_y</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">test_y</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span>
-<span class="n">inv_y</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">test_y</span><span class="p">,</span> <span class="n">test_X</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">7</span><span class="p">:]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">inv_y</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">inv_y</span><span class="p">)</span>
-<span class="n">inv_y</span> <span class="o">=</span> <span class="n">inv_y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span>
-<span class="c1"># calculate RMSE</span>
-<span class="n">rmse</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">inv_y</span><span class="p">,</span> <span class="n">inv_yhat</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Test RMSE: </span><span class="si">%.3f</span><span class="s1">'</span> <span class="o">%</span> <span class="n">rmse</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1"># make a prediction</span></span>
+<span class="code-line"><span class="n">yhat</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_X</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">test_X</span> <span class="o">=</span> <span class="n">test_X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">test_X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">n_hours</span><span class="o">*</span><span class="n">n_features</span><span class="p">))</span></span>
+<span class="code-line"><span class="c1"># invert scaling for forecast</span></span>
+<span class="code-line"><span class="n">inv_yhat</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">yhat</span><span class="p">,</span> <span class="n">test_X</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">7</span><span class="p">:]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">inv_yhat</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">inv_yhat</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">inv_yhat</span> <span class="o">=</span> <span class="n">inv_yhat</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span></span>
+<span class="code-line"><span class="c1"># invert scaling for actual</span></span>
+<span class="code-line"><span class="n">test_y</span> <span class="o">=</span> <span class="n">test_y</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">test_y</span><span class="p">),</span> <span class="mi">1</span><span class="p">))</span></span>
+<span class="code-line"><span class="n">inv_y</span> <span class="o">=</span> <span class="n">concatenate</span><span class="p">((</span><span class="n">test_y</span><span class="p">,</span> <span class="n">test_X</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">7</span><span class="p">:]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">inv_y</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">inverse_transform</span><span class="p">(</span><span class="n">inv_y</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">inv_y</span> <span class="o">=</span> <span class="n">inv_y</span><span class="p">[:,</span><span class="mi">0</span><span class="p">]</span></span>
+<span class="code-line"><span class="c1"># calculate RMSE</span></span>
+<span class="code-line"><span class="n">rmse</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">inv_y</span><span class="p">,</span> <span class="n">inv_yhat</span><span class="p">))</span></span>
+<span class="code-line"><span class="nb">print</span><span class="p">(</span><span class="s1">'Test RMSE: </span><span class="si">%.3f</span><span class="s1">'</span> <span class="o">%</span> <span class="n">rmse</span><span class="p">)</span></span>
 </pre></div>
 </div>
 </div>
@@ -4225,7 +4250,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test RMSE: 24.990
+<pre><span class="code-line">Test RMSE: 24.990</span>
 </pre>
 </div>
 </div>
@@ -4237,13 +4262,12 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span> </span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -4283,8 +4307,18 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
 
             <div class="row" id="prevnext">
                 <div class="col-xs-12">
+                    <a href="//tenghuiji.github.io/pm25-correlation-analysis.html" class="btn btn-default btn-lg" style="float:left;clear:both;background-color:#fff;">
+                        <h4><i class="fa fa-arrow-left"></i>
+                        PM2.5 Correlation Analysis
+                        </h4>
+                    </a>
                 </div>
                 <div class="col-xs-12">
+                    <a href="//tenghuiji.github.io/spider-tianyancha.html" class="btn btn-default btn-lg" style="float:right;clear:both;background-color:#fff;">
+                        <h4>
+                        天眼查爬虫<i class="fa fa-arrow-right"></i>
+                        </h4>
+                    </a>
                 </div>
             </div>
 
@@ -4348,6 +4382,16 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
     </div>
 <div class="panel-body">
     <ul class="list-group list-inline tagcloud" id="tags">
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-selenium-beautifulsoup-xpath.html">
+                    python selenium BeautifulSoup xpath <sup> 1</sup>
+                </a>
+            </li>
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-correlation-analysis.html">
+                    python Correlation Analysis <sup> 1</sup>
+                </a>
+            </li>
     </ul>
 </div>
 </div>
