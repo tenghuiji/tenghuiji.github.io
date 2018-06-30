@@ -61,7 +61,7 @@
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table dataframe table-striped"&gt;
+&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -231,7 +231,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover table dataframe table-striped"&gt;
+&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
