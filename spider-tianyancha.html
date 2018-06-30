@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+>
+<head>
+    <title>VM_Ware_EXSI创建虚拟机 - Tenghuiji's Blog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="theme-color" content="#6b5594">
+    <meta name="msapplication-navbutton-color" content="#6b5594">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6b5594">
+    <link rel="manifest" href="/manifest.json">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="//tenghuiji.github.io/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="//tenghuiji.github.io/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="//tenghuiji.github.io/images/favicon-16x16.png" sizes="16x16">
+<link rel="mask-icon" href="//tenghuiji.github.io/images/safari-pinned-tab.svg" color="#603cba">
+
+<link rel="canonical" href="//tenghuiji.github.io/spider-tianyancha.html">
+
+        <meta name="author" content="tenghuiji" />
+        <meta name="keywords" content="VM EXSI" />
+        <meta name="description" content="用 VM Ware EXSI 创建虚拟机" />
+
+        <meta property="og:site_name" content="Tenghuiji's Blog" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="VM_Ware_EXSI创建虚拟机"/>
+        <meta property="og:url" content="//tenghuiji.github.io/spider-tianyancha.html"/>
+        <meta property="og:description" content="用 VM Ware EXSI 创建虚拟机"/>
+        <meta property="article:published_time" content="2018-06-30" />
+            <meta property="article:section" content="VM" />
+            <meta property="article:tag" content="VM EXSI" />
+            <meta property="article:author" content="tenghuiji" />
+        <meta property="og:image"
+                  content="//tenghuiji.github.io/spider-tianyancha.png"/>
+
+
+
+    <!-- Bootstrap -->
+        <link href="//tenghuiji.github.io/theme/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//tenghuiji.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="//tenghuiji.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="//tenghuiji.github.io/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+        <link href="//tenghuiji.github.io/theme/css/html4css1.css" rel="stylesheet">
+    <link rel="stylesheet" href="//tenghuiji.github.io/theme/css/style.css" type="text/css"/>
+
+
+        <link href="//tenghuiji.github.io/theme/css/material.min.css" rel="stylesheet">
+        <link href="//tenghuiji.github.io/theme/css/ripples.css" rel="stylesheet">
+    <link href="//tenghuiji.github.io/theme/css/github-markdown.css" rel="stylesheet">
+</head>
+<body>
+<div style="display:none" id="title">VM_Ware_EXSI创建虚拟机 - Tenghuiji's Blog</div>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">        Toggle navigation
+</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="//tenghuiji.github.io/" class="navbar-brand">
+Tenghuiji's Blog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+
+
+                    <li class="dropdown hidden-md hidden-lg hidden-xl">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                            <i class="fa fa-user"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </li>
+
+                  <ul class="nav navbar-nav hidden-xs hidden-sm">
+                  </ul>
+            </ul>
+
+                <ul class="nav navbar-nav hidden-md hidden-lg hidden-xl">
+                    <li class="dropdown hidden-md hidden-lg hidden-xl">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                            <i class="fa fa-folder-o"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li >
+                                <a href="//tenghuiji.github.io/category/correlation-analysis.html"><i class="fa fa-folder-o"></i> Correlation analysis</a>
+                            </li>
+                            <li >
+                                <a href="//tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
+                            </li>
+                            <li >
+                                <a href="//tenghuiji.github.io/category/spider.html"><i class="fa fa-folder-o"></i> Spider</a>
+                            </li>
+                            <li class="active">
+                                <a href="//tenghuiji.github.io/category/vm.html"><i class="fa fa-folder-o"></i> Vm</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                    <ul class="nav navbar-nav hidden-xs hidden-sm">
+                        <li >
+                            <a href="//tenghuiji.github.io/category/correlation-analysis.html"><i class="fa fa-folder-o"></i> Correlation analysis</a>
+                        </li>
+                        <li >
+                            <a href="//tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
+                        </li>
+                        <li >
+                            <a href="//tenghuiji.github.io/category/spider.html"><i class="fa fa-folder-o"></i> Spider</a>
+                        </li>
+                        <li class="active">
+                            <a href="//tenghuiji.github.io/category/vm.html"><i class="fa fa-folder-o"></i> Vm</a>
+                        </li>
+                    </ul>
+
+
+
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg hidden-xl">
+                <li class="dropdown hidden-md hidden-lg hidden-xl">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                        <i class="fa fa-search"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><span>
+                        <form class="navbar-search" action="/search.html">
+                          <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                        </form></span>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-right navbar-form hidden-xs">
+              <li><span>
+                <form class="navbar-search" action="/search.html">
+                  <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+              <li><a href="//tenghuiji.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">        All
+</span></a></li>
+              <li><a href="//tenghuiji.github.io/feeds/atom.xml" title="Atom feeds for all articles"><i class="fa fa-rss"></i></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container" style="min-height: 100%;height: auto !important;height: 100%;">
+    <div class="row" style="padding-bottom:80px;padding-top:80px;">
+        <div class="col-xl-21 col-lg-20 col-md-18">
+            <div id="loading-block">
+            <ol class="breadcrumb">
+                <li><a href="//tenghuiji.github.io/" title="Tenghuiji's Blog"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="//tenghuiji.github.io/category/vm.html" title="VM">VM</a></li>
+                <li class="active">VM_Ware_EXSI创建虚拟机</li>
+            </ol>
+    <section id="content" class="article-content">
+        <article>
+            <header class="page-header jumbotron jumbotron-primary panel-primary" id="article-header">
+                <div class="panel-heading">
+                    <h1>
+                        VM_Ware_EXSI创建虚拟机
+                        <a href="//tenghuiji.github.io/spider-tianyancha.html"
+                           rel="bookmark"
+                           class="btn btn-primary btn-lg"
+                           title="        Permalink to VM_Ware_EXSI创建虚拟机
+">
+                           <i class="mdi-action-launch"></i>
+                        </a>
+                    </h1>
+                </div>
+                <div class="panel-body">
+<div class="post-info">
+    <span class="published">
+        <time datetime="2018-06-30T18:20:00+08:00"><i class="fa fa-calendar"></i> 2018年06月30日(周六)</time>
+    </span>
+
+
+
+<div class="btn-group translations">
+<a href="javascript:void(0)" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="mdi-action-translate"></i><span class="caret"></a>
+<ul class="dropdown-menu">
+<li class="active"><a href="//tenghuiji.github.io/spider-tianyancha.html">简体</a></li><li><a href="//tenghuiji.github.io/spider-tianyancha.html" class="translate">简体</a></li></ul>
+</div>
+
+    <a onclick="$.get('//tenghuiji.github.io/spider-tianyancha.rst.html', function(data){$('#source-code').html(data)});$('#article-content').toggle();$('#source-content').toggle();" class="btn btn-primary" title="        Show source code of this page
+"><i class="fa fa-code"></i></a>
+    <!--<a href="//tenghuiji.github.io/spider-tianyancha.pdf" class="btn btn-primary" title="        Show pdf version of this page
+" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+    <a href="//tenghuiji.github.io/spider-tianyancha.png" class="btn btn-primary" title="        Show captured png of this page
+" target="_blank""><i class="fa fa-file-photo-o"></i></a>-->
+
+<span class="btn-group">
+	<a href="//tenghuiji.github.io/tag/vm-exsi.html" class="btn btn-primary btn-xs"><i class="fa fa-tag"></i> VM EXSI</a>
+</span>
+
+
+
+</div><!-- /.post-info -->                </div>
+            </header>
+
+            <div class="entry-content jumbotron" id="article-content">
+                
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="VM-Ware-EXSI创建虚拟机">VM Ware EXSI创建虚拟机<a class="anchor-link" href="#VM-Ware-EXSI创建虚拟机">¶</a></h1><h6 id="第一步创建虚拟机">第一步创建虚拟机<a class="anchor-link" href="#第一步创建虚拟机">¶</a></h6><p>点击图片的 Create/Register VM</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_1.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>选择新建一个虚拟机</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_2.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_3.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_4.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_5.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_8.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_6.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_7.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_9.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_10.png"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span> </span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+            </div>
+            <div class="entry-content jumbotron" id="source-content" style="display: none">
+                <!-- <pre><code id="source-code">
+                </code></pre> -->
+                <div id="source-code"></div>
+            </div>
+            <!-- /.entry-content -->
+
+            <div class="row" id="prevnext">
+                <div class="col-xs-12">
+                    <a href="//tenghuiji.github.io/Correlation_Analysis.html" class="btn btn-default btn-lg" style="float:left;clear:both;background-color:#fff;">
+                        <h4><i class="fa fa-arrow-left"></i>
+                        北京 PM2.5 相关性分析
+                        </h4>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a href="//tenghuiji.github.io/spider-tianyancha.html" class="btn btn-default btn-lg" style="float:right;clear:both;background-color:#fff;">
+                        <h4>
+                        天眼查爬虫<i class="fa fa-arrow-right"></i>
+                        </h4>
+                    </a>
+                </div>
+            </div>
+
+
+<section class="comments" id="comments">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    </div>
+</section>        </article>
+    </section>
+
+
+            </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <a data-dismiss="modal" href="javascript:void(0);">
+            <img id="mimg" src="" style="width:100%;height:auto">
+          </a>
+        </div>
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6" id="sidebar">
+            <aside>
+
+<section>
+    <div class="sidebar-container">
+<div class="sidebar-item ">
+<div class="panel panel-default">
+	<div class="panel-heading">
+        <h4>
+<i class="fa fa-user fa-lg"></i>
+<a href="//tenghuiji.github.io/about.html">
+        About Tenghuiji
+</a>
+        </h4>
+    </div>
+<div class="panel-body" id="aboutme">
+        <a href="//tenghuiji.github.io/about.html"><img width="100%" src="//tenghuiji.github.io/../images/avatar.jpg"/></a>
+    <h3 style="text-align:center">
+<a href="https://github.com/tenghuiji" target="_blank">
+<i class="fa fa-github" style="text-align:center"></i></a>
+<a href="https://twitter.com/tenghuiji" target="_blank">
+<i class="fa fa-twitter" style="text-align:center"></i></a>
+<a href="http://weibo.com/thjgo" target="_blank">
+<i class="fa fa-weibo" style="text-align:center"></i></a>
+<a href="mailto:tenghuiji@163.com" target="_blank">
+<i class="mdi-communication-email" style="text-align:center"></i></a>
+</h3>
+
+</div>
+</div>
+</div>        
+
+
+
+            
+
+<div class="sidebar-item hidden-xs">
+<div class="panel panel-default">
+	<div class="panel-heading">
+        <h4>
+<a href="//tenghuiji.github.io/tags.html"><i class="fa fa-tags fa-lg"></i><span class="icon-label">        Tags
+</span></a>
+        </h4>
+    </div>
+<div class="panel-body">
+    <ul class="list-group list-inline tagcloud" id="tags">
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/vm-exsi.html">
+                    VM EXSI <sup> 1</sup>
+                </a>
+            </li>
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-selenium-beautifulsoup-xpath.html">
+                    python selenium BeautifulSoup xpath <sup> 1</sup>
+                </a>
+            </li>
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-correlation-analysis.html">
+                    python Correlation Analysis <sup> 1</sup>
+                </a>
+            </li>
+    </ul>
+</div>
+</div>
+</div>
+
+<div class="sidebar-item hidden-xs">
+<div class="panel panel-default">
+	<div class="panel-heading">
+        <h4>
+<i class="fa fa-github fa-lg"></i><span class="icon-label">        GitHub Repos
+</span>
+        </h4>
+    </div>
+    <div class="panel-body">
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+            <a href="https://github.com/tenghuiji">@tenghuiji</a> on GitHub<br>
+    </div>
+</div>
+</div>
+
+    </div>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+
+<footer id="fcfooter">
+   <hr/>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-24">
+         <p><small>
+            &copy; 2018 Tenghuiji
+            &middot;         Powered by
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>         generator
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    <!-- Content -->
+  <!-- licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise. -->
+
+         </small></p>
+         </div>
+      </div>
+   </div>
+   <a href="#" class="btn btn-primary btn-fab btn-raised mdi-editor-vertical-align-top withripple" style="position:fixed;bottom:30px;right:30px;z-index:1000"></a>
+</footer>
+<script src="//tenghuiji.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//tenghuiji.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="//tenghuiji.github.io/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = '//tenghuiji.github.io/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'tenghuiji',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="//tenghuiji.github.io/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+
+<script src="//tenghuiji.github.io/theme/js/ripples.min.js"></script>
+<script src="//tenghuiji.github.io/theme/js/material.min.js"></script>
+<script src="//tenghuiji.github.io/theme/js/jquery.bootstrap-autohidingnavbar.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $.material.init();
+        $("div.navbar").autoHidingNavbar();
+        $(".img-responsive").css("cursor","pointer").on('click',function(){
+            var sr=$(this).attr('src');
+            $('#mimg').attr('src',sr);
+            $('#myModal').modal('show');
+        });
+        $('#affix-toc').affix({
+          offset: {
+            top: function(){
+                if($('#affix-toc').hasClass("affix"))
+                    return $('#sidebar').height();
+                return $('#sidebar').height() - $('#affix-toc').height();
+            },
+            bottom: function (){
+                return $("#fcfooter").offset().top -
+                    $("#article-content").offset().top -
+                    $("#article-content").height() + 20;
+            }
+          }
+        });
+        $('#affix-toc').width($('#sidebar').width());
+    });
+    $(window).resize(function () {
+       $('#affix-toc').width($('#sidebar').width());
+    });
+</script>
+
+</body>
+</html>

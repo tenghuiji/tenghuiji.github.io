@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="zh-Hans"
+>
+<head>
+    <title>PM2.5 Correlation Analysis - Tenghuiji's Blog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="theme-color" content="#6b5594">
+    <meta name="msapplication-navbutton-color" content="#6b5594">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#6b5594">
+    <link rel="manifest" href="/manifest.json">
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="//tenghuiji.github.io/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="//tenghuiji.github.io/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="//tenghuiji.github.io/images/favicon-16x16.png" sizes="16x16">
+<link rel="mask-icon" href="//tenghuiji.github.io/images/safari-pinned-tab.svg" color="#603cba">
+
+<link rel="canonical" href="//tenghuiji.github.io/pm25-correlation-analysis.html">
+
+        <meta name="author" content="Tenghuiji" />
+        <meta name="description" content="北京PM2.5相关性分析 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns %matplotlib inline 加载原始数据 dataset = pd.read_csv(&#39;./dataset/beijing.csv&#39;) dataset.head(5) .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } No …" />
+
+        <meta property="og:site_name" content="Tenghuiji's Blog" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="PM2.5 Correlation Analysis"/>
+        <meta property="og:url" content="//tenghuiji.github.io/pm25-correlation-analysis.html"/>
+        <meta property="og:description" content="北京PM2.5相关性分析 import pandas as pd import numpy as np import matplotlib.pyplot as plt import seaborn as sns %matplotlib inline 加载原始数据 dataset = pd.read_csv(&#39;./dataset/beijing.csv&#39;) dataset.head(5) .dataframe thead tr:only-child th { text-align: right; } .dataframe thead th { text-align: left; } .dataframe tbody tr th { vertical-align: top; } No …"/>
+        <meta property="article:published_time" content="2010-12-04" />
+            <meta property="article:section" content="Correlation Analysis" />
+            <meta property="article:author" content="Tenghuiji" />
+        <meta property="og:image"
+                  content="//tenghuiji.github.io/pm25-correlation-analysis.png"/>
+
+
+
+    <!-- Bootstrap -->
+        <link href="//tenghuiji.github.io/theme/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="//tenghuiji.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="//tenghuiji.github.io/theme/css/pygments/monokai.css" rel="stylesheet">
+    <link href="//tenghuiji.github.io/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+        <link href="//tenghuiji.github.io/theme/css/html4css1.css" rel="stylesheet">
+    <link rel="stylesheet" href="//tenghuiji.github.io/theme/css/style.css" type="text/css"/>
+
+        <link href="//tenghuiji.github.io/feeds/atom.xml" type="application/atom+xml" rel="alternate"
+              title="Tenghuiji's Blog ATOM Feed"/>
+
+        <link href="//tenghuiji.github.io/theme/css/material.min.css" rel="stylesheet">
+        <link href="//tenghuiji.github.io/theme/css/ripples.css" rel="stylesheet">
+    <link href="//tenghuiji.github.io/theme/css/github-markdown.css" rel="stylesheet">
+</head>
+<body>
+<div style="display:none" id="title">PM2.5 Correlation Analysis - Tenghuiji's Blog</div>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">        Toggle navigation
+</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="//tenghuiji.github.io/" class="navbar-brand">
+Tenghuiji's Blog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+
+
+                    <li class="dropdown hidden-md hidden-lg hidden-xl">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                            <i class="fa fa-user"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                        </ul>
+                    </li>
+
+                  <ul class="nav navbar-nav hidden-xs hidden-sm">
+                  </ul>
+            </ul>
+
+                <ul class="nav navbar-nav hidden-md hidden-lg hidden-xl">
+                    <li class="dropdown hidden-md hidden-lg hidden-xl">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                            <i class="fa fa-folder-o"></i><span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="active">
+                                <a href="//tenghuiji.github.io/category/correlation-analysis.html"><i class="fa fa-folder-o"></i> Correlation analysis</a>
+                            </li>
+                            <li >
+                                <a href="//tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
+                            </li>
+                            <li >
+                                <a href="//tenghuiji.github.io/category/spider.html"><i class="fa fa-folder-o"></i> Spider</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                    <ul class="nav navbar-nav hidden-xs hidden-sm">
+                        <li class="active">
+                            <a href="//tenghuiji.github.io/category/correlation-analysis.html"><i class="fa fa-folder-o"></i> Correlation analysis</a>
+                        </li>
+                        <li >
+                            <a href="//tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
+                        </li>
+                        <li >
+                            <a href="//tenghuiji.github.io/category/spider.html"><i class="fa fa-folder-o"></i> Spider</a>
+                        </li>
+                    </ul>
+
+
+
+            <ul class="nav navbar-nav navbar-right hidden-sm hidden-md hidden-lg hidden-xl">
+                <li class="dropdown hidden-md hidden-lg hidden-xl">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)">
+                        <i class="fa fa-search"></i><span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><span>
+                        <form class="navbar-search" action="/search.html">
+                          <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                        </form></span>
+                      </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-right navbar-form hidden-xs">
+              <li><span>
+                <form class="navbar-search" action="/search.html">
+                  <input type="text" class="search-query form-control col-lg-16" placeholder="        Search
+" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right hidden-xs">
+              <li><a href="//tenghuiji.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">        All
+</span></a></li>
+              <li><a href="//tenghuiji.github.io/feeds/atom.xml" title="Atom feeds for all articles"><i class="fa fa-rss"></i></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container" style="min-height: 100%;height: auto !important;height: 100%;">
+    <div class="row" style="padding-bottom:80px;padding-top:80px;">
+        <div class="col-xl-21 col-lg-20 col-md-18">
+            <div id="loading-block">
+            <ol class="breadcrumb">
+                <li><a href="//tenghuiji.github.io/" title="Tenghuiji's Blog"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="//tenghuiji.github.io/category/correlation-analysis.html" title="Correlation Analysis">Correlation Analysis</a></li>
+                <li class="active">PM2.5 Correlation Analysis</li>
+            </ol>
+    <section id="content" class="article-content">
+        <article>
+            <header class="page-header jumbotron jumbotron-primary panel-primary" id="article-header">
+                <div class="panel-heading">
+                    <h1>
+                        PM2.5 Correlation Analysis
+                        <a href="//tenghuiji.github.io/pm25-correlation-analysis.html"
+                           rel="bookmark"
+                           class="btn btn-primary btn-lg"
+                           title="        Permalink to PM2.5 Correlation Analysis
+">
+                           <i class="mdi-action-launch"></i>
+                        </a>
+                    </h1>
+                </div>
+                <div class="panel-body">
+<div class="post-info">
+    <span class="published">
+        <time datetime="2010-12-04T10:20:00+08:00"><i class="fa fa-calendar"></i> 2010年12月04日(周六)</time>
+    </span>
+
+
+
+
+    <a onclick="$.get('//tenghuiji.github.io/pm25-correlation-analysis.rst.html', function(data){$('#source-code').html(data)});$('#article-content').toggle();$('#source-content').toggle();" class="btn btn-primary" title="        Show source code of this page
+"><i class="fa fa-code"></i></a>
+    <!--<a href="//tenghuiji.github.io/pm25-correlation-analysis.pdf" class="btn btn-primary" title="        Show pdf version of this page
+" target="_blank"><i class="fa fa-file-pdf-o"></i></a>
+    <a href="//tenghuiji.github.io/pm25-correlation-analysis.png" class="btn btn-primary" title="        Show captured png of this page
+" target="_blank""><i class="fa fa-file-photo-o"></i></a>-->
+
+
+
+
+</div><!-- /.post-info -->                </div>
+            </header>
+
+            <div class="entry-content jumbotron" id="article-content">
+                <h1 id="pm25">北京PM2.5相关性分析</h1>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">seaborn</span> <span class="kn">as</span> <span class="nn">sns</span></span>
+<span class="code-line"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span></span>
+</pre></div>
+<h4 id="_1">加载原始数据</h4>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing.csv'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span></span>
+</pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="table-hover table dataframe table-striped">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>No</th>
+<th>year</th>
+<th>month</th>
+<th>day</th>
+<th>hour</th>
+<th>pm2.5</th>
+<th>DEWP</th>
+<th>TEMP</th>
+<th>PRES</th>
+<th>cbwd</th>
+<th>Iws</th>
+<th>Is</th>
+<th>Ir</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1</td>
+<td>2010</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>NaN</td>
+<td>-21</td>
+<td>-11.0</td>
+<td>1021.0</td>
+<td>NW</td>
+<td>1.79</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>2</td>
+<td>2010</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>NaN</td>
+<td>-21</td>
+<td>-12.0</td>
+<td>1020.0</td>
+<td>NW</td>
+<td>4.92</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>3</td>
+<td>2010</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>NaN</td>
+<td>-21</td>
+<td>-11.0</td>
+<td>1019.0</td>
+<td>NW</td>
+<td>6.71</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>4</td>
+<td>2010</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>NaN</td>
+<td>-21</td>
+<td>-14.0</td>
+<td>1019.0</td>
+<td>NW</td>
+<td>9.84</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>5</td>
+<td>2010</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>NaN</td>
+<td>-20</td>
+<td>-12.0</td>
+<td>1018.0</td>
+<td>NW</td>
+<td>12.97</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>No: row number <br/>
+year: year of data in this row <br/>
+month: month of data in this row <br/>
+day: day of data in this row <br/>
+hour: hour of data in this row <br/>
+pm2.5: PM2.5 concentration (ug/m^3) <br/>
+DEWP: Dew Point (â„ƒ) <br/>
+TEMP: Temperature (â„ƒ) <br/>
+PRES: Pressure (hPa) <br/>
+cbwd: Combined wind direction <br/>
+Iws: Cumulated wind speed (m/s) <br/>
+Is: Cumulated hours of snow <br/>
+Ir: Cumulated hours of rain</p>
+<h4 id="_2">数据清洗</h4>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">dataset</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing.csv'</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">parse_dates</span><span class="o">=</span><span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]],</span><span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span></span>
+<span class="code-line">                      <span class="n">date_parser</span><span class="o">=</span><span class="k">lambda</span> <span class="n">date</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date</span><span class="p">,</span><span class="s1">'%Y %m </span><span class="si">%d</span><span class="s1"> %H'</span><span class="p">))</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'No'</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">inplace</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">name</span><span class="o">=</span><span class="s1">'date'</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'pollution'</span><span class="p">,</span> <span class="s1">'dew'</span><span class="p">,</span> <span class="s1">'temp'</span><span class="p">,</span> <span class="s1">'press'</span><span class="p">,</span> <span class="s1">'wnd_dir'</span><span class="p">,</span> <span class="s1">'wnd_spd'</span><span class="p">,</span> <span class="s1">'snow'</span><span class="p">,</span> <span class="s1">'rain'</span><span class="p">]</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">.</span><span class="n">head</span><span class="p">()</span></span>
+</pre></div>
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="table-hover table dataframe table-striped">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>pollution</th>
+<th>dew</th>
+<th>temp</th>
+<th>press</th>
+<th>wnd_dir</th>
+<th>wnd_spd</th>
+<th>snow</th>
+<th>rain</th>
+</tr>
+<tr>
+<th>date</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>2010-01-01 00:00:00</th>
+<td>NaN</td>
+<td>-21</td>
+<td>-11.0</td>
+<td>1021.0</td>
+<td>NW</td>
+<td>1.79</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2010-01-01 01:00:00</th>
+<td>NaN</td>
+<td>-21</td>
+<td>-12.0</td>
+<td>1020.0</td>
+<td>NW</td>
+<td>4.92</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2010-01-01 02:00:00</th>
+<td>NaN</td>
+<td>-21</td>
+<td>-11.0</td>
+<td>1019.0</td>
+<td>NW</td>
+<td>6.71</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2010-01-01 03:00:00</th>
+<td>NaN</td>
+<td>-21</td>
+<td>-14.0</td>
+<td>1019.0</td>
+<td>NW</td>
+<td>9.84</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2010-01-01 04:00:00</th>
+<td>NaN</td>
+<td>-20</td>
+<td>-12.0</td>
+<td>1018.0</td>
+<td>NW</td>
+<td>12.97</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">pd</span><span class="o">.</span><span class="n">isnull</span><span class="p">(</span><span class="n">dataset</span><span class="p">)</span><span class="o">.</span><span class="n">any</span><span class="p">()</span></span>
+</pre></div>
+<div class="codehilite"><pre><span class="code-line"><span></span>pollution     True</span>
+<span class="code-line">dew          False</span>
+<span class="code-line">temp         False</span>
+<span class="code-line">press        False</span>
+<span class="code-line">wnd_dir      False</span>
+<span class="code-line">wnd_spd      False</span>
+<span class="code-line">snow         False</span>
+<span class="code-line">rain         False</span>
+<span class="code-line">dtype: bool</span>
+</pre></div>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="c1">#缺失数据用平均值填充</span></span>
+<span class="code-line"><span class="n">dataset</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">dataset</span><span class="o">.</span><span class="n">mean</span><span class="p">()[</span><span class="s1">'pollution'</span><span class="p">],</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span></span>
+</pre></div>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span></span>
+</pre></div>
+<div class="codehilite"><pre><span class="code-line"><span></span>array(['NW', 'cv', 'NE', 'SE'], dtype=object)</span>
+</pre></div>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">=</span><span class="n">dataset</span><span class="o">.</span><span class="n">wnd_dir</span><span class="o">.</span><span class="n">map</span><span class="p">({</span><span class="s1">'NW'</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s1">'cv'</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s1">'NE'</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s1">'SE'</span><span class="p">:</span><span class="mi">3</span><span class="p">})</span></span>
+</pre></div>
+<h4 id="_3">保存数据清洗结果</h4>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">dataset</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">)</span></span>
+</pre></div>
+<h2 id="_4">加载数据</h2>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/beijing_pm25.csv'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">series</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]</span></span>
+<span class="code-line"><span class="n">series_values</span><span class="o">=</span><span class="n">series</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float32'</span><span class="p">)</span></span>
+</pre></div>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span></span>
+<span class="code-line"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span></span>
+<span class="code-line">    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span></span>
+<span class="code-line">    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">values</span><span class="p">[:,</span><span class="n">i</span><span class="p">])</span></span>
+<span class="code-line">    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">data_set</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">'right'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span>
+</pre></div>
+<p><img alt="png" class="img-responsive" src="output_15_0.png"/></p>
+<h3 id="_5">相关性分析</h3>
+<div class="codehilite"><pre><span class="code-line"><span></span><span class="n">corr_all</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">'date'</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span> <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">bool</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">mask</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">triu_indices_from</span><span class="p">(</span><span class="n">mask</span><span class="p">)]</span> <span class="o">=</span> <span class="bp">True</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">f</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_all</span><span class="p">,</span><span class="n">mask</span> <span class="o">=</span> <span class="n">mask</span><span class="p">,</span><span class="n">linewidths</span><span class="o">=</span><span class="mf">0.25</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">square</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span></span>
+<span class="code-line">            <span class="n">cmap</span><span class="o">=</span><span class="s2">"YlGnBu"</span><span class="p">,</span> <span class="n">linecolor</span><span class="o">=</span><span class="s1">'black'</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">plt</span><span class="o">.</span><span class="n">savefig</span><span class="p">(</span><span class="s1">'./Correlation_Analysis.pdf'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span></span>
+</pre></div>
+<p><img alt="png" class="img-responsive" src="output_17_0.png"/></p>
+<p>对于pm2.5来说没有看到比较强的相关指标<br/>
+可以看到露水和温度呈现正相关特征<br/>
+气压和露水呈现负相关特征<br/>
+气压和温度呈现负相关特征</p>
+<div class="codehilite"><pre><span class="code-line"><span></span></span>
+</pre></div>
+            </div>
+            <div class="entry-content jumbotron" id="source-content" style="display: none">
+                <!-- <pre><code id="source-code">
+                </code></pre> -->
+                <div id="source-code"></div>
+            </div>
+            <!-- /.entry-content -->
+
+            <div class="row" id="prevnext">
+                <div class="col-xs-12">
+                    <a href="//tenghuiji.github.io/my-first-review.html" class="btn btn-default btn-lg" style="float:left;clear:both;background-color:#fff;">
+                        <h4><i class="fa fa-arrow-left"></i>
+                        My First Review
+                        </h4>
+                    </a>
+                </div>
+                <div class="col-xs-12">
+                    <a href="//tenghuiji.github.io/Correlation_Analysis.html" class="btn btn-default btn-lg" style="float:right;clear:both;background-color:#fff;">
+                        <h4>
+                        北京 PM2.5 相关性分析<i class="fa fa-arrow-right"></i>
+                        </h4>
+                    </a>
+                </div>
+            </div>
+
+
+<section class="comments" id="comments">
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    </div>
+</section>        </article>
+    </section>
+
+
+            </div>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <a data-dismiss="modal" href="javascript:void(0);">
+            <img id="mimg" src="" style="width:100%;height:auto">
+          </a>
+        </div>
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6" id="sidebar">
+            <aside>
+
+<section>
+    <div class="sidebar-container">
+<div class="sidebar-item ">
+<div class="panel panel-default">
+	<div class="panel-heading">
+        <h4>
+<i class="fa fa-user fa-lg"></i>
+<a href="//tenghuiji.github.io/about.html">
+        About Tenghuiji
+</a>
+        </h4>
+    </div>
+<div class="panel-body" id="aboutme">
+        <a href="//tenghuiji.github.io/about.html"><img width="100%" src="//tenghuiji.github.io/../images/avatar.jpg"/></a>
+    <h3 style="text-align:center">
+<a href="https://github.com/tenghuiji" target="_blank">
+<i class="fa fa-github" style="text-align:center"></i></a>
+<a href="https://twitter.com/tenghuiji" target="_blank">
+<i class="fa fa-twitter" style="text-align:center"></i></a>
+<a href="http://weibo.com/thjgo" target="_blank">
+<i class="fa fa-weibo" style="text-align:center"></i></a>
+<a href="mailto:tenghuiji@163.com" target="_blank">
+<i class="mdi-communication-email" style="text-align:center"></i></a>
+</h3>
+
+</div>
+</div>
+</div>        
+
+
+
+            
+
+<div class="sidebar-item hidden-xs">
+<div class="panel panel-default">
+	<div class="panel-heading">
+        <h4>
+<a href="//tenghuiji.github.io/tags.html"><i class="fa fa-tags fa-lg"></i><span class="icon-label">        Tags
+</span></a>
+        </h4>
+    </div>
+<div class="panel-body">
+    <ul class="list-group list-inline tagcloud" id="tags">
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-selenium-beautifulsoup-xpath.html">
+                    python selenium BeautifulSoup xpath <sup> 1</sup>
+                </a>
+            </li>
+            <li class="list-group-item tag-4">
+                <a href="//tenghuiji.github.io/tag/python-correlation-analysis.html">
+                    python Correlation Analysis <sup> 1</sup>
+                </a>
+            </li>
+    </ul>
+</div>
+</div>
+</div>
+
+<div class="sidebar-item hidden-xs">
+<div class="panel panel-default">
+	<div class="panel-heading">
+        <h4>
+<i class="fa fa-github fa-lg"></i><span class="icon-label">        GitHub Repos
+</span>
+        </h4>
+    </div>
+    <div class="panel-body">
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+            <a href="https://github.com/tenghuiji">@tenghuiji</a> on GitHub<br>
+    </div>
+</div>
+</div>
+
+    </div>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+
+<footer id="fcfooter">
+   <hr/>
+   <div class="container">
+      <div class="row">
+         <div class="col-md-24">
+         <p><small>
+            &copy; 2018 Tenghuiji
+            &middot;         Powered by
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>         generator
+                <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
+    <!-- Content -->
+  <!-- licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise. -->
+
+         </small></p>
+         </div>
+      </div>
+   </div>
+   <a href="#" class="btn btn-primary btn-fab btn-raised mdi-editor-vertical-align-top withripple" style="position:fixed;bottom:30px;right:30px;z-index:1000"></a>
+</footer>
+<script src="//tenghuiji.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="//tenghuiji.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="//tenghuiji.github.io/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = '//tenghuiji.github.io/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'tenghuiji',
+                count: 5,
+                skip_forks: false,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="//tenghuiji.github.io/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+
+<script src="//tenghuiji.github.io/theme/js/ripples.min.js"></script>
+<script src="//tenghuiji.github.io/theme/js/material.min.js"></script>
+<script src="//tenghuiji.github.io/theme/js/jquery.bootstrap-autohidingnavbar.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $.material.init();
+        $("div.navbar").autoHidingNavbar();
+        $(".img-responsive").css("cursor","pointer").on('click',function(){
+            var sr=$(this).attr('src');
+            $('#mimg').attr('src',sr);
+            $('#myModal').modal('show');
+        });
+        $('#affix-toc').affix({
+          offset: {
+            top: function(){
+                if($('#affix-toc').hasClass("affix"))
+                    return $('#sidebar').height();
+                return $('#sidebar').height() - $('#affix-toc').height();
+            },
+            bottom: function (){
+                return $("#fcfooter").offset().top -
+                    $("#article-content").offset().top -
+                    $("#article-content").height() + 20;
+            }
+          }
+        });
+        $('#affix-toc').width($('#sidebar').width());
+    });
+    $(window).resize(function () {
+       $('#affix-toc').width($('#sidebar').width());
+    });
+</script>
+
+</body>
+</html>
