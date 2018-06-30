@@ -2,7 +2,7 @@
 <html lang="zh-Hans"
 >
 <head>
-    <title>VM_Ware_EXSI创建虚拟机 - Tenghuiji's Blog</title>
+    <title>天眼查爬虫 - Tenghuiji's Blog</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -23,17 +23,17 @@
 <link rel="canonical" href="//tenghuiji.github.io/spider-tianyancha.html">
 
         <meta name="author" content="tenghuiji" />
-        <meta name="keywords" content="VM EXSI" />
-        <meta name="description" content="用 VM Ware EXSI 创建虚拟机" />
+        <meta name="keywords" content="python selenium BeautifulSoup xpath" />
+        <meta name="description" content="用 selenium 和 BeautifulSoup 爬取 www.tianyancha.com 的数据" />
 
         <meta property="og:site_name" content="Tenghuiji's Blog" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="VM_Ware_EXSI创建虚拟机"/>
+        <meta property="og:title" content="天眼查爬虫"/>
         <meta property="og:url" content="//tenghuiji.github.io/spider-tianyancha.html"/>
-        <meta property="og:description" content="用 VM Ware EXSI 创建虚拟机"/>
-        <meta property="article:published_time" content="2018-06-30" />
-            <meta property="article:section" content="VM" />
-            <meta property="article:tag" content="VM EXSI" />
+        <meta property="og:description" content="用 selenium 和 BeautifulSoup 爬取 www.tianyancha.com 的数据"/>
+        <meta property="article:published_time" content="2018-03-26" />
+            <meta property="article:section" content="spider" />
+            <meta property="article:tag" content="python selenium BeautifulSoup xpath" />
             <meta property="article:author" content="tenghuiji" />
         <meta property="og:image"
                   content="//tenghuiji.github.io/spider-tianyancha.png"/>
@@ -56,7 +56,7 @@
     <link href="//tenghuiji.github.io/theme/css/github-markdown.css" rel="stylesheet">
 </head>
 <body>
-<div style="display:none" id="title">VM_Ware_EXSI创建虚拟机 - Tenghuiji's Blog</div>
+<div style="display:none" id="title">天眼查爬虫 - Tenghuiji's Blog</div>
 
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -99,10 +99,10 @@ Tenghuiji's Blog            </a>
                             <li >
                                 <a href="//tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
                             </li>
-                            <li >
+                            <li class="active">
                                 <a href="//tenghuiji.github.io/category/spider.html"><i class="fa fa-folder-o"></i> Spider</a>
                             </li>
-                            <li class="active">
+                            <li >
                                 <a href="//tenghuiji.github.io/category/vm.html"><i class="fa fa-folder-o"></i> Vm</a>
                             </li>
                         </ul>
@@ -116,10 +116,10 @@ Tenghuiji's Blog            </a>
                         <li >
                             <a href="//tenghuiji.github.io/category/review.html"><i class="fa fa-folder-o"></i> Review</a>
                         </li>
-                        <li >
+                        <li class="active">
                             <a href="//tenghuiji.github.io/category/spider.html"><i class="fa fa-folder-o"></i> Spider</a>
                         </li>
-                        <li class="active">
+                        <li >
                             <a href="//tenghuiji.github.io/category/vm.html"><i class="fa fa-folder-o"></i> Vm</a>
                         </li>
                     </ul>
@@ -168,19 +168,19 @@ Tenghuiji's Blog            </a>
             <div id="loading-block">
             <ol class="breadcrumb">
                 <li><a href="//tenghuiji.github.io/" title="Tenghuiji's Blog"><i class="fa fa-home fa-lg"></i></a></li>
-                <li><a href="//tenghuiji.github.io/category/vm.html" title="VM">VM</a></li>
-                <li class="active">VM_Ware_EXSI创建虚拟机</li>
+                <li><a href="//tenghuiji.github.io/category/spider.html" title="spider">spider</a></li>
+                <li class="active">天眼查爬虫</li>
             </ol>
     <section id="content" class="article-content">
         <article>
             <header class="page-header jumbotron jumbotron-primary panel-primary" id="article-header">
                 <div class="panel-heading">
                     <h1>
-                        VM_Ware_EXSI创建虚拟机
+                        天眼查爬虫
                         <a href="//tenghuiji.github.io/spider-tianyancha.html"
                            rel="bookmark"
                            class="btn btn-primary btn-lg"
-                           title="        Permalink to VM_Ware_EXSI创建虚拟机
+                           title="        Permalink to 天眼查爬虫
 ">
                            <i class="mdi-action-launch"></i>
                         </a>
@@ -189,16 +189,11 @@ Tenghuiji's Blog            </a>
                 <div class="panel-body">
 <div class="post-info">
     <span class="published">
-        <time datetime="2018-06-30T18:20:00+08:00"><i class="fa fa-calendar"></i> 2018年06月30日(周六)</time>
+        <time datetime="2018-03-26T20:00:00+08:00"><i class="fa fa-calendar"></i> 2018年03月26日(周一)</time>
     </span>
 
 
 
-<div class="btn-group translations">
-<a href="javascript:void(0)" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><i class="mdi-action-translate"></i><span class="caret"></a>
-<ul class="dropdown-menu">
-<li class="active"><a href="//tenghuiji.github.io/spider-tianyancha.html">简体</a></li><li><a href="//tenghuiji.github.io/spider-tianyancha.html" class="translate">简体</a></li></ul>
-</div>
 
     <a onclick="$.get('//tenghuiji.github.io/spider-tianyancha.rst.html', function(data){$('#source-code').html(data)});$('#article-content').toggle();$('#source-content').toggle();" class="btn btn-primary" title="        Show source code of this page
 "><i class="fa fa-code"></i></a>
@@ -208,7 +203,7 @@ Tenghuiji's Blog            </a>
 " target="_blank""><i class="fa fa-file-photo-o"></i></a>-->
 
 <span class="btn-group">
-	<a href="//tenghuiji.github.io/tag/vm-exsi.html" class="btn btn-primary btn-xs"><i class="fa fa-tag"></i> VM EXSI</a>
+	<a href="//tenghuiji.github.io/tag/python-selenium-beautifulsoup-xpath.html" class="btn btn-primary btn-xs"><i class="fa fa-tag"></i> python selenium BeautifulSoup xpath</a>
 </span>
 
 
@@ -222,105 +217,224 @@ Tenghuiji's Blog            </a>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="VM-Ware-EXSI创建虚拟机">VM Ware EXSI创建虚拟机<a class="anchor-link" href="#VM-Ware-EXSI创建虚拟机">¶</a></h1><h6 id="第一步创建虚拟机">第一步创建虚拟机<a class="anchor-link" href="#第一步创建虚拟机">¶</a></h6><p>点击图片的 Create/Register VM</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_1.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>选择新建一个虚拟机</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_2.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_3.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_4.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_5.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_8.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_6.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_7.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_9.png"/></p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_10.png"/></p>
+<h1 id="天眼查爬虫">天眼查爬虫<a class="anchor-link" href="#天眼查爬虫">¶</a></h1><p>2018-1-21<br/>
+marking的同事跑过来求帮忙，能不能通过爬虫帮他，根据会议收集表格中，人员名单所填写的公司名称添加一列行业信息。<br/>
+他目前是手工到天眼输入公司名称，然后再取出觉得匹配的公司，最后在找到行业分类。但是人员明天太多了，做这么枯燥的工作他要疯了:(<br/>
+我觉得这个应该比较简单，答应他帮他写个爬虫</p>
+<h6 id="确定爬取方式">确定爬取方式<a class="anchor-link" href="#确定爬取方式">¶</a></h6><p>selenium是个自动化测试工具，他可以通过浏览器来模拟各种操作实现测试页面功能<br/>
+BeautifulSoup是个爬虫常用的Dom解析工具<br/>
+lxml提供了xpath获取方法，强烈推荐通过xpath访问节点，配合Chrome的inspect工具中的 copy xpath可以节省大量的节点获取工作量</p>
+<h6 id="安装必要的工具">安装必要的工具<a class="anchor-link" href="#安装必要的工具">¶</a></h6><p>pip install selenium<br/>
+pip install lxml<br/>
+pip install beautifulsoup4<br/>
+下载最新的chromedriver<br/>
+<a href="http://chromedriver.storage.googleapis.com/index.html">http://chromedriver.storage.googleapis.com/index.html</a><br/>
+我是mac 安装到/usr/local/bin/目录下，然后运行 chromedriver -v查看是否安装好了</p>
+<h6 id="常见问题">常见问题<a class="anchor-link" href="#常见问题">¶</a></h6><ol>
+<li>公司名称不存在；在天眼搜里面找不到公司名称就在程序中填写none或者其他的字符说明  </li>
+<li>相似公司很多个不确定怎么选；这个比较不好处理，现在是取天眼搜中查找到的top 1 记录 我想人选择的话可能会根据与会者所在地配合来查找吧，例如是在北京参加的，那么就有限找北京的同名（名称相似）的公司  </li>
+<li>天眼里面找到的母公司下面有多个子公司，导致鼠标点击不到连接，必须拉滚动条才能解决问题  </li>
+</ol>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [30]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span> </span>
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="k">import</span> <span class="n">webdriver</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.common.exceptions</span> <span class="k">import</span> <span class="n">TimeoutException</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="k">import</span> <span class="n">By</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.webdriver.support.ui</span> <span class="k">import</span> <span class="n">WebDriverWait</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">selenium.webdriver.support</span> <span class="k">import</span> <span class="n">expected_conditions</span> <span class="k">as</span> <span class="n">EC</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">bs4</span> <span class="k">import</span> <span class="n">BeautifulSoup</span></span>
+<span class="code-line"><span class="kn">from</span> <span class="nn">lxml</span> <span class="k">import</span> <span class="n">etree</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">time</span></span>
+<span class="code-line"><span class="kn">import</span> <span class="nn">random</span></span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [31]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="k">def</span> <span class="nf">search</span><span class="p">(</span><span class="n">keywords</span><span class="p">):</span></span>
+<span class="code-line">    <span class="c1"># print('正在搜索:{}'.format(keywords))</span></span>
+<span class="code-line">    <span class="k">try</span><span class="p">:</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'https://www.tianyancha.com/'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="c1"># 找到输入框</span></span>
+<span class="code-line">        <span class="nb">input</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_element_located</span><span class="p">(</span></span>
+<span class="code-line">                <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                 <span class="s1">'.main-tab-outer .main-tab-body .inputV2 input'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="c1"># input.send_keys(keywords.decode('utf-8'))#中英混输入可防止乱码</span></span>
+<span class="code-line">        <span class="nb">input</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">keywords</span><span class="p">)</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="n">submit</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">(</span></span>
+<span class="code-line">                <span class="p">(</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                 <span class="s1">'.mainv2_tab1 .inputV2 .search_button.white-btn'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="n">submit</span><span class="o">.</span><span class="n">click</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 获取打开的多个窗口句柄</span></span>
+<span class="code-line">        <span class="n">windows</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="c1"># 切换到当前最新打开的窗口</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">windows</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 用目标元素参考去拖动</span></span>
+<span class="code-line">        <span class="n">target_elem</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">find_element_by_xpath</span><span class="p">(</span></span>
+<span class="code-line">            <span class="s1">'//*[@id="web-content"]/div/div/div/div[1]/div[3]/div[1]/div[1]'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="n">js</span> <span class="o">=</span> <span class="s1">'arguments[0].scrollIntoView();'</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">execute_script</span><span class="p">(</span><span class="n">js</span><span class="p">,</span> <span class="n">target_elem</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 在搜索结果中获取第一个公司</span></span>
+<span class="code-line">        <span class="n">top1</span> <span class="o">=</span> <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">element_to_be_clickable</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                                        <span class="s1">'.search_result_container a'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="n">top1</span><span class="o">.</span><span class="n">click</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 关闭当前窗口</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 获取打开的多个窗口句柄</span></span>
+<span class="code-line">        <span class="n">windows</span> <span class="o">=</span> <span class="n">browser</span><span class="o">.</span><span class="n">window_handles</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="c1"># 切换到当前最新打开的窗口</span></span>
+<span class="code-line">        <span class="n">browser</span><span class="o">.</span><span class="n">switch_to</span><span class="o">.</span><span class="n">window</span><span class="p">(</span><span class="n">windows</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 等待页面全部加载完成</span></span>
+<span class="code-line">        <span class="n">wait</span><span class="o">.</span><span class="n">until</span><span class="p">(</span></span>
+<span class="code-line">            <span class="n">EC</span><span class="o">.</span><span class="n">presence_of_all_elements_located</span><span class="p">((</span><span class="n">By</span><span class="o">.</span><span class="n">CSS_SELECTOR</span><span class="p">,</span></span>
+<span class="code-line">                                                 <span class="s1">'#_container_baseInfo'</span><span class="p">)))</span></span>
+<span class="code-line">        <span class="n">selector</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">HTML</span><span class="p">(</span><span class="n">browser</span><span class="o">.</span><span class="n">page_source</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line">        <span class="c1"># 获取公司名称</span></span>
+<span class="code-line">        <span class="n">company_name</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span></span>
+<span class="code-line">            <span class="s1">'//*[@id="company_web_top"]/div[2]/div[2]/div[1]/span/text()'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="c1"># 获取公司信息表格中的行业信息xpath //*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()</span></span>
+<span class="code-line">        <span class="n">links</span> <span class="o">=</span> <span class="n">selector</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span></span>
+<span class="code-line">            <span class="s1">'//*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()'</span></span>
+<span class="code-line">        <span class="p">)</span></span>
+<span class="code-line">        <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span></span>
+<span class="code-line">        <span class="k">for</span> <span class="n">link</span> <span class="ow">in</span> <span class="n">links</span><span class="p">:</span></span>
+<span class="code-line">            <span class="n">s</span> <span class="o">=</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="n">company_name</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span></span>
+<span class="code-line">                                                    <span class="n">link</span><span class="p">)</span></span>
+<span class="code-line">            <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span></span>
+<span class="code-line">            <span class="k">return</span> <span class="n">s</span></span>
+<span class="code-line">        <span class="c1"># browser.close()</span></span>
+<span class="code-line">    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span></span>
+<span class="code-line">        <span class="n">s</span> <span class="o">=</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">)</span></span>
+<span class="code-line">        <span class="nb">print</span><span class="p">(</span><span class="s1">'公司名称:</span><span class="si">{}</span><span class="s1">,找到的公司:</span><span class="si">{}</span><span class="s1">,所属行业:</span><span class="si">{}</span><span class="s1">'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">keywords</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">,</span> <span class="s1">'NaN'</span><span class="p">))</span></span>
+<span class="code-line">        <span class="k">return</span> <span class="n">s</span></span>
+<span class="code-line">        <span class="c1">#pass</span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [36]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1">#跟新数据</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">updateString</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#提取查找输入的公司名称</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">splitCompanyNameColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#提取找到的公司名称</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">splitFindCompanyNameColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#提取找到的所属行业</span></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">splitIndustryColumn</span><span class="p">(</span><span class="n">ss</span><span class="p">):</span></span>
+<span class="code-line">    <span class="nb">print</span><span class="p">(</span><span class="n">ss</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">return</span> <span class="n">ss</span><span class="p">[</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">':'</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="n">ss</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">','</span><span class="p">)]</span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [39]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="code-line"><span></span><span class="c1"># 启动浏览器，executable_path路径要根据自己chromedriver.exe的位置更改</span></span>
+<span class="code-line"><span class="n">browser</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">executable_path</span><span class="o">=</span><span class="sa">r</span><span class="s1">'/usr/local/bin/chromedriver'</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># 设置浏览器窗口位置及大小</span></span>
+<span class="code-line"><span class="n">browser</span><span class="o">.</span><span class="n">set_window_rect</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1200</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">750</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># 设定页面加载限制时间</span></span>
+<span class="code-line"><span class="n">browser</span><span class="o">.</span><span class="n">set_page_load_timeout</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span></span>
+<span class="code-line"><span class="c1"># 设置锁定标签等待时长</span></span>
+<span class="code-line"><span class="n">wait</span> <span class="o">=</span> <span class="n">WebDriverWait</span><span class="p">(</span><span class="n">browser</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'./dataset/Jam_data_analysis.csv'</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'公司'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">search</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'公司名称'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitCompanyNameColumn</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">updateString</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'找到的公司'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitFindCompanyNameColumn</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">updateString</span><span class="p">)</span></span>
+<span class="code-line"><span class="n">df</span><span class="p">[</span><span class="s1">'所属行业'</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">splitIndustryColumn</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#删除临时字段</span></span>
+<span class="code-line"><span class="k">del</span> <span class="n">df</span><span class="p">[</span><span class="s1">'临时'</span><span class="p">]</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#关闭浏览器</span></span>
+<span class="code-line"><span class="n">browser</span><span class="o">.</span><span class="n">close</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c1">#保存结果到csv文件中</span></span>
+<span class="code-line"><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">'./dataset/output.csv'</span><span class="p">)</span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre><span class="code-line">公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">0    公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">1             公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">2                公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">Name: 临时, dtype: object</span>
+<span class="code-line">公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">0    找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">1                  找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">2                  找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">Name: 临时, dtype: object</span>
+<span class="code-line">找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业</span>
+<span class="code-line">找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">找到的公司:NaN,所属行业:NaN</span>
+<span class="code-line">0    所属行业:科技推广和应用服务业</span>
+<span class="code-line">1           所属行业:NaN</span>
+<span class="code-line">2           所属行业:NaN</span>
+<span class="code-line">Name: 临时, dtype: object</span>
+<span class="code-line">所属行业:科技推广和应用服务业</span>
+<span class="code-line">所属行业:NaN</span>
+<span class="code-line">所属行业:NaN</span>
+</pre>
+</div>
 </div>
 </div>
 </div>
@@ -371,9 +485,9 @@ Tenghuiji's Blog            </a>
                     </a>
                 </div>
                 <div class="col-xs-12">
-                    <a href="//tenghuiji.github.io/spider-tianyancha.html" class="btn btn-default btn-lg" style="float:right;clear:both;background-color:#fff;">
+                    <a href="//tenghuiji.github.io/VM Ware EXSI.html" class="btn btn-default btn-lg" style="float:right;clear:both;background-color:#fff;">
                         <h4>
-                        天眼查爬虫<i class="fa fa-arrow-right"></i>
+                        VM_Ware_EXSI创建虚拟机<i class="fa fa-arrow-right"></i>
                         </h4>
                     </a>
                 </div>

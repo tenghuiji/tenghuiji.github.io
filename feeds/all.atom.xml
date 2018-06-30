@@ -1,141 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tenghuiji's Blog</title><link href="//tenghuiji.github.io/" rel="alternate"></link><link href="//tenghuiji.github.io/feeds/all.atom.xml" rel="self"></link><id>//tenghuiji.github.io/</id><updated>2018-06-30T18:20:00+08:00</updated><entry><title>VM_Ware_EXSI创建虚拟机</title><link href="//tenghuiji.github.io/spider-tianyancha.html" rel="alternate"></link><published>2018-06-30T18:20:00+08:00</published><updated>2018-06-30T18:20:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-06-30:/spider-tianyancha.html</id><summary type="html">&lt;p&gt;用 VM Ware EXSI 创建虚拟机&lt;/p&gt;</summary><content type="html">
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="VM-Ware-EXSI创建虚拟机"&gt;VM Ware EXSI创建虚拟机&lt;a class="anchor-link" href="#VM-Ware-EXSI创建虚拟机"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;h6 id="第一步创建虚拟机"&gt;第一步创建虚拟机&lt;a class="anchor-link" href="#第一步创建虚拟机"&gt;¶&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;点击图片的 Create/Register VM&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_1.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;选择新建一个虚拟机&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_2.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_3.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_4.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_5.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_8.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_6.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_7.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_9.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;p&gt;&lt;img alt="" class="img-responsive" src="https://raw.githubusercontent.com/tenghuiji/tenghuiji.github.io/master/images/Snip20180630_10.png"/&gt;&lt;/p&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [ ]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt; &lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: 'center'," +
-        "    displayIndent: '0em'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['$','$'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        " linebreaks: { automatic: true, width: '95% container' }, " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
-        "    } " +
-        "}); ";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;
-</content><category term="VM EXSI"></category></entry><entry><title>VM_Ware_EXSI创建虚拟机</title><link href="//tenghuiji.github.io/spider-tianyancha.html" rel="alternate"></link><published>2018-06-30T18:20:00+08:00</published><updated>2018-06-30T18:20:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-06-30:/spider-tianyancha.html</id><summary type="html">&lt;p&gt;用 VM Ware EXSI 创建虚拟机&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tenghuiji's Blog</title><link href="//tenghuiji.github.io/" rel="alternate"></link><link href="//tenghuiji.github.io/feeds/all.atom.xml" rel="self"></link><id>//tenghuiji.github.io/</id><updated>2018-06-30T18:20:00+08:00</updated><entry><title>VM_Ware_EXSI创建虚拟机</title><link href="//tenghuiji.github.io/VM%20Ware%20EXSI.html" rel="alternate"></link><published>2018-06-30T18:20:00+08:00</published><updated>2018-06-30T18:20:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-06-30:/VM Ware EXSI.html</id><summary type="html">&lt;p&gt;用 VM Ware EXSI 创建虚拟机&lt;/p&gt;</summary><content type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -526,261 +390,6 @@ pip install beautifulsoup4&lt;br/&gt;
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
 &lt;/script&gt;
-</content><category term="python selenium BeautifulSoup xpath"></category></entry><entry><title>天眼查爬虫</title><link href="//tenghuiji.github.io/spider-tianyancha.html" rel="alternate"></link><published>2018-03-26T20:00:00+08:00</published><updated>2018-03-26T20:00:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-03-26:/spider-tianyancha.html</id><summary type="html">&lt;p&gt;用 selenium 和 BeautifulSoup 爬取 www.tianyancha.com 的数据&lt;/p&gt;</summary><content type="html">
-&lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
-&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="text_cell_render border-box-sizing rendered_html"&gt;
-&lt;h1 id="天眼查爬虫"&gt;天眼查爬虫&lt;a class="anchor-link" href="#天眼查爬虫"&gt;¶&lt;/a&gt;&lt;/h1&gt;&lt;p&gt;2018-1-21&lt;br/&gt;
-marking的同事跑过来求帮忙，能不能通过爬虫帮他，根据会议收集表格中，人员名单所填写的公司名称添加一列行业信息。&lt;br/&gt;
-他目前是手工到天眼输入公司名称，然后再取出觉得匹配的公司，最后在找到行业分类。但是人员明天太多了，做这么枯燥的工作他要疯了:(&lt;br/&gt;
-我觉得这个应该比较简单，答应他帮他写个爬虫&lt;/p&gt;
-&lt;h6 id="确定爬取方式"&gt;确定爬取方式&lt;a class="anchor-link" href="#确定爬取方式"&gt;¶&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;selenium是个自动化测试工具，他可以通过浏览器来模拟各种操作实现测试页面功能&lt;br/&gt;
-BeautifulSoup是个爬虫常用的Dom解析工具&lt;br/&gt;
-lxml提供了xpath获取方法，强烈推荐通过xpath访问节点，配合Chrome的inspect工具中的 copy xpath可以节省大量的节点获取工作量&lt;/p&gt;
-&lt;h6 id="安装必要的工具"&gt;安装必要的工具&lt;a class="anchor-link" href="#安装必要的工具"&gt;¶&lt;/a&gt;&lt;/h6&gt;&lt;p&gt;pip install selenium&lt;br/&gt;
-pip install lxml&lt;br/&gt;
-pip install beautifulsoup4&lt;br/&gt;
-下载最新的chromedriver&lt;br/&gt;
-&lt;a href="http://chromedriver.storage.googleapis.com/index.html"&gt;http://chromedriver.storage.googleapis.com/index.html&lt;/a&gt;&lt;br/&gt;
-我是mac 安装到/usr/local/bin/目录下，然后运行 chromedriver -v查看是否安装好了&lt;/p&gt;
-&lt;h6 id="常见问题"&gt;常见问题&lt;a class="anchor-link" href="#常见问题"&gt;¶&lt;/a&gt;&lt;/h6&gt;&lt;ol&gt;
-&lt;li&gt;公司名称不存在；在天眼搜里面找不到公司名称就在程序中填写none或者其他的字符说明  &lt;/li&gt;
-&lt;li&gt;相似公司很多个不确定怎么选；这个比较不好处理，现在是取天眼搜中查找到的top 1 记录 我想人选择的话可能会根据与会者所在地配合来查找吧，例如是在北京参加的，那么就有限找北京的同名（名称相似）的公司  &lt;/li&gt;
-&lt;li&gt;天眼里面找到的母公司下面有多个子公司，导致鼠标点击不到连接，必须拉滚动条才能解决问题  &lt;/li&gt;
-&lt;/ol&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [30]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium.common.exceptions&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;TimeoutException&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium.webdriver.common.by&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;By&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium.webdriver.support.ui&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;WebDriverWait&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;selenium.webdriver.support&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;expected_conditions&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;EC&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="nn"&gt;pd&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;bs4&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;BeautifulSoup&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;lxml&lt;/span&gt; &lt;span class="k"&gt;import&lt;/span&gt; &lt;span class="n"&gt;etree&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;random&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [31]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;search&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keywords&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="c1"&gt;# print('正在搜索:{}'.format(keywords))&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'https://www.tianyancha.com/'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 找到输入框&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="nb"&gt;input&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wait&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;until&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="n"&gt;EC&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;presence_of_element_located&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;By&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CSS_SELECTOR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;                 &lt;span class="s1"&gt;'.main-tab-outer .main-tab-body .inputV2 input'&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# input.send_keys(keywords.decode('utf-8'))#中英混输入可防止乱码&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="nb"&gt;input&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;send_keys&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keywords&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;submit&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wait&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;until&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="n"&gt;EC&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;element_to_be_clickable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;                &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;By&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CSS_SELECTOR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;                 &lt;span class="s1"&gt;'.mainv2_tab1 .inputV2 .search_button.white-btn'&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;submit&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 获取打开的多个窗口句柄&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;windows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window_handles&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 切换到当前最新打开的窗口&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;switch_to&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;windows&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 用目标元素参考去拖动&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;target_elem&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find_element_by_xpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="s1"&gt;'//*[@id="web-content"]/div/div/div/div[1]/div[3]/div[1]/div[1]'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;js&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;'arguments[0].scrollIntoView();'&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;execute_script&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;js&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target_elem&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 在搜索结果中获取第一个公司&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;top1&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;wait&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;until&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="n"&gt;EC&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;element_to_be_clickable&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;By&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CSS_SELECTOR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;                                        &lt;span class="s1"&gt;'.search_result_container a'&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;top1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;click&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 关闭当前窗口&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 获取打开的多个窗口句柄&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;windows&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window_handles&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 切换到当前最新打开的窗口&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;switch_to&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;window&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;windows&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 等待页面全部加载完成&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;wait&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;until&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="n"&gt;EC&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;presence_of_all_elements_located&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="n"&gt;By&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;CSS_SELECTOR&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;                                                 &lt;span class="s1"&gt;'#_container_baseInfo'&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;selector&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;etree&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;HTML&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;page_source&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 获取公司名称&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;company_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;selector&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="s1"&gt;'//*[@id="company_web_top"]/div[2]/div[2]/div[1]/span/text()'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# 获取公司信息表格中的行业信息xpath //*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;links&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;selector&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;xpath&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="s1"&gt;'//*[@id="_container_baseInfo"]/div/div[3]/table/tbody/tr[3]/td[4]/text()'&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sample&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;link&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;links&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'公司名称:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;,找到的公司:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;,所属行业:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keywords&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;company_name&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;                                                    &lt;span class="n"&gt;link&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;# browser.close()&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;'公司名称:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;,找到的公司:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;,所属行业:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keywords&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'NaN'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'NaN'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'公司名称:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;,找到的公司:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;,所属行业:&lt;/span&gt;&lt;span class="si"&gt;{}&lt;/span&gt;&lt;span class="s1"&gt;'&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;keywords&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'NaN'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;'NaN'&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;        &lt;span class="c1"&gt;#pass&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [36]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#跟新数据&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;updateString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;','&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:]&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;#提取查找输入的公司名称&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;splitCompanyNameColumn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;':'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;','&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;#提取找到的公司名称&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;splitFindCompanyNameColumn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;':'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;','&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;#提取找到的所属行业&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;splitIndustryColumn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="nb"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;':'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="n"&gt;ss&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;find&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;','&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="cell border-box-sizing code_cell rendered"&gt;
-&lt;div class="input"&gt;
-&lt;div class="prompt input_prompt"&gt;In [39]:&lt;/div&gt;
-&lt;div class="inner_cell"&gt;
-&lt;div class="input_area"&gt;
-&lt;div class=" highlight hl-ipython3"&gt;&lt;pre&gt;&lt;span class="code-line"&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 启动浏览器，executable_path路径要根据自己chromedriver.exe的位置更改&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;webdriver&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Chrome&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;executable_path&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="sa"&gt;r&lt;/span&gt;&lt;span class="s1"&gt;'/usr/local/bin/chromedriver'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;# 设置浏览器窗口位置及大小&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_window_rect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;width&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1200&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;height&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;750&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;# 设定页面加载限制时间&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_page_load_timeout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;30&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;# 设置锁定标签等待时长&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;wait&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;WebDriverWait&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'./dataset/Jam_data_analysis.csv'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'公司'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;search&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'公司名称'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;splitCompanyNameColumn&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;updateString&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'找到的公司'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;splitFindCompanyNameColumn&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;updateString&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'所属行业'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;apply&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;splitIndustryColumn&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;#删除临时字段&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;'临时'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;#关闭浏览器&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;browser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="c1"&gt;#保存结果到csv文件中&lt;/span&gt;&lt;/span&gt;
-&lt;span class="code-line"&gt;&lt;span class="n"&gt;df&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;'./dataset/output.csv'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="output_wrapper"&gt;
-&lt;div class="output"&gt;
-&lt;div class="output_area"&gt;
-&lt;div class="prompt"&gt;&lt;/div&gt;
-&lt;div class="output_subarea output_stream output_stdout output_text"&gt;
-&lt;pre&gt;&lt;span class="code-line"&gt;公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业&lt;/span&gt;
-&lt;span class="code-line"&gt;公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;0    公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业&lt;/span&gt;
-&lt;span class="code-line"&gt;1             公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;2                公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;Name: 临时, dtype: object&lt;/span&gt;
-&lt;span class="code-line"&gt;公司名称:小米,找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业&lt;/span&gt;
-&lt;span class="code-line"&gt;公司名称:猎豹汽车研究院,找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;公司名称:滴滴出行,找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;0    找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业&lt;/span&gt;
-&lt;span class="code-line"&gt;1                  找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;2                  找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;Name: 临时, dtype: object&lt;/span&gt;
-&lt;span class="code-line"&gt;找到的公司:小米科技有限责任公司,所属行业:科技推广和应用服务业&lt;/span&gt;
-&lt;span class="code-line"&gt;找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;找到的公司:NaN,所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;0    所属行业:科技推广和应用服务业&lt;/span&gt;
-&lt;span class="code-line"&gt;1           所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;2           所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;Name: 临时, dtype: object&lt;/span&gt;
-&lt;span class="code-line"&gt;所属行业:科技推广和应用服务业&lt;/span&gt;
-&lt;span class="code-line"&gt;所属行业:NaN&lt;/span&gt;
-&lt;span class="code-line"&gt;所属行业:NaN&lt;/span&gt;
-&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
-    var mathjaxscript = document.createElement('script');
-    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
-    mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
-        "MathJax.Hub.Config({" +
-        "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
-        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
-        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: 'center'," +
-        "    displayIndent: '0em'," +
-        "    showMathMenu: true," +
-        "    tex2jax: { " +
-        "        inlineMath: [ ['$','$'] ], " +
-        "        displayMath: [ ['$$','$$'] ]," +
-        "        processEscapes: true," +
-        "        preview: 'TeX'," +
-        "    }, " +
-        "    'HTML-CSS': { " +
-        " linebreaks: { automatic: true, width: '95% container' }, " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
-        "    } " +
-        "}); ";
-    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
-}
-&lt;/script&gt;
 </content><category term="python selenium BeautifulSoup xpath"></category></entry><entry><title>北京 PM2.5 相关性分析</title><link href="//tenghuiji.github.io/Correlation_Analysis.html" rel="alternate"></link><published>2017-10-12T18:00:00+08:00</published><updated>2017-10-12T18:00:00+08:00</updated><author><name>Tenghuiji</name></author><id>tag:tenghuiji.github.io,2017-10-12:/Correlation_Analysis.html</id><summary type="html">&lt;p&gt;Beijing PM2.5 Correlation Analysis.&lt;/p&gt;</summary><content type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
@@ -843,7 +452,7 @@ pip install beautifulsoup4&lt;br/&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -1013,7 +622,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4894,7 +4503,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4923,7 +4532,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -5061,7 +4670,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
