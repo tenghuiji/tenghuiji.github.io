@@ -61,7 +61,7 @@
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -231,7 +231,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4112,7 +4112,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4141,7 +4141,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4279,7 +4279,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;

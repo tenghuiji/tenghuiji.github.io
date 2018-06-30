@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Tenghuiji's Blog</title><link href="//tenghuiji.github.io/" rel="alternate"></link><link href="//tenghuiji.github.io/feeds/atom.xml" rel="self"></link><id>//tenghuiji.github.io/</id><updated>2018-06-30T18:20:00+08:00</updated><entry><title>VM_Ware_EXSI创建虚拟机</title><link href="//tenghuiji.github.io/spider-tianyancha.html" rel="alternate"></link><published>2018-06-30T18:20:00+08:00</published><updated>2018-06-30T18:20:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-06-30:/spider-tianyancha.html</id><summary type="html">&lt;p&gt;用 VM Ware EXSI 创建虚拟机&lt;/p&gt;</summary><content type="html">
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Tenghuiji's Blog</title><link href="//tenghuiji.github.io/" rel="alternate"></link><link href="//tenghuiji.github.io/feeds/atom.xml" rel="self"></link><id>//tenghuiji.github.io/</id><updated>2018-06-30T18:20:00+08:00</updated><entry><title>VM_Ware_EXSI创建虚拟机</title><link href="//tenghuiji.github.io/VM%20Ware%20EXSI.html" rel="alternate"></link><published>2018-06-30T18:20:00+08:00</published><updated>2018-06-30T18:20:00+08:00</updated><author><name>tenghuiji</name></author><id>tag:tenghuiji.github.io,2018-06-30:/VM Ware EXSI.html</id><summary type="html">&lt;p&gt;用 VM Ware EXSI 创建虚拟机&lt;/p&gt;</summary><content type="html">
 &lt;div class="cell border-box-sizing text_cell rendered"&gt;&lt;div class="prompt input_prompt"&gt;
 &lt;/div&gt;
 &lt;div class="inner_cell"&gt;
@@ -452,7 +452,7 @@ pip install beautifulsoup4&lt;br/&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -622,7 +622,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4503,7 +4503,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4532,7 +4532,7 @@ Hj7ta9FkA4KIiJxZTbXKSEREzjAFBBERARQQREQkpIAgIiKAAoKIiIQUEEREBFBAEBGRkAKCiIgA
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -4670,7 +4670,7 @@ Ir: Cumulated hours of rain&lt;/p&gt;
         vertical-align: top;
     }
 &lt;/style&gt;
-&lt;table border="1" class="table-hover dataframe table-striped table"&gt;
+&lt;table border="1" class="table dataframe table-hover table-striped"&gt;
 &lt;thead&gt;
 &lt;tr style="text-align: right;"&gt;
 &lt;th&gt;&lt;/th&gt;
